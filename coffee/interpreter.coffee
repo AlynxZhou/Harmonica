@@ -1,81 +1,167 @@
-#!/usr.bin/env coffee
+#!/usr/bin/env coffee
 #-*- coding: utf-8 -*-
+
+# Filename: interpreter.coffee
+# Created by 请叫我喵 Alynx.
+# alynx.zhou@gmail.com, http://alynx.xyz/
 
 fs = require "fs"
 readline = require "readline"
 
 file = process.argv[2]
 
+if file?
+	inputStream = fs.createReadStream(file)
+else
+	inputStream = process.stdin
+
 rl = readline.createInterface
-	#input: fs.createReadStream(file)
-	input: process.stdin
+	input: inputStream
 	output: process.stdout
 	terminal: false
 
+validArr = [' ', '\n', '\t', '#', '(', ')', '{', '}', '[', ']', '<', '>', '0', '1', '2', '3', '4', '5', '6', '7', '#1', '#2', '#3', '#4', '#5', '#6', '#7']
+
 lineNum = 0
 
-scoreEncode = (line) ->
-	noteArr = new Array()
+keySplit = (line) ->
+	keyArr = new Array()
 	i = 0
 	while i < line.length
 		switch line[i]
 			when '#'
-				noteArr.push '#' + line[i + 1]
-				# process.stdout.write comp_dict[line[i + 1]]
+				keyArr.push '#' + line[i + 1]
 				i++
-				# else
 					# throw new Error "Invalid express \'##{line[i + 1]}\' at Line #{lineNum}, Column #{i + 1}: \n\n\t#{line}\n"
 			when ';'
-				noteArr.push line[i..line.length]
+				keyArr.push line[i..line.length]
 				i = line.length
 			else
-				noteArr.push line[i]
-				# process.stdout.write line[i]
+				keyArr.push line[i]
 		i++
-	return noteArr
+	return keyArr
 
-scoreCheck = (noteArr) ->
-	validArr = [' ', '\n', '\t', '#', '(', ')', '{', '}', '[', ']', '<', '>', '0', '1', '2', '3', '4', '5', '6', '7']
-	for char in noteArr
-		if char not in validArr
-			throw new Error "Invalid music note \'#{char}\'."
-
-parenAdd = (noteArr) ->
-	parenArr = new Array()
+keyCheck = (keyArr) ->
 	i = 0
-	while i < noteArr.length
-		switch noteArr[i]
+	for key in keyArr
+		i += key.length
+		if key not in validArr and key[0] isnt ';'
+			throw new Error "Invalid key \'#{key}\' at Line #{lineNum}, Colomn #{i}:\n\n\t#{keyArr.join('')}\n"
+	return keyArr
+
+parenSplit = (keyArr) ->
+	parenArr = new Array()
+	tempArr = new Array()
+	i = 0
+	while i < keyArr.length
+		switch keyArr[i]
+			when ')'
+				keyArr.unshift '('
+				i = -1
+				tempArr = []
+			when ']'
+				keyArr.unshift '['
+				i = -1
+				tempArr = []
+			when '}'
+				keyArr.unshift '{'
+				i = -1
+				tempArr = []
+			when '('
+				if tempArr.length
+					parenArr.push(tempArr)
+					tempArr = []
+				if keyArr[i...keyArr.length].indexOf(')') isnt -1
+					parenArr.push(keyArr[i..keyArr.indexOf(')')])
+					i += keyArr[i...keyArr.length].indexOf(')')
+				else
+					keyArr.push(')')
+					parenArr.push(keyArr[i..keyArr.length])
+					i = keyArr.length
+			when '['
+				if tempArr.length
+					parenArr.push(tempArr)
+					tempArr = []
+				if keyArr[i...keyArr.length].indexOf(']') isnt -1
+					parenArr.push(keyArr[i..keyArr.indexOf(']')])
+					i += keyArr[i...keyArr.length].indexOf(']')
+				else
+					keyArr.push(']')
+					parenArr.push(keyArr[i..keyArr.length])
+					i = keyArr.length
+			when '{'
+				if tempArr.length
+					parenArr.push(tempArr)
+					tempArr = []
+				if keyArr[i...keyArr.length].indexOf('}') isnt -1
+					parenArr.push(keyArr[i..keyArr.indexOf('}')])
+					i += keyArr[i...keyArr.length].indexOf('}')
+				else
+					keyArr.push('}')
+					parenArr.push(keyArr[i..keyArr.length])
+					i = keyArr.length
+			else
+				if keyArr[i][0] isnt ';'
+					tempArr.push keyArr[i]
+		i++
+	if tempArr.length then parenArr.push(tempArr)
+	return parenArr
+
+parenCheck = (parenArr) ->
+	i = 0
+	for arr in parenArr
+		if arr[0] in ['(', '[', '{']
+			testArr = arr[1...(arr.length - 1)]
+		else
+			testArr = arr
+		for paren in ['(', ')', '[', ']', '{', '}']
+			if paren in testArr
+				i += arr.indexOf(paren) + 1
+				str = ''
+				for x in parenArr
+					str += x.join('')
+				throw new Error "Unexpected \'#{paren}\' at Line #{lineNum}, Colomn #{i}:\n\n\t#{str}\n"
+		i += arr.join('').length
+	return parenArr
+
+scoreRebuild = (keyArr) ->
+	rebuildArr = new Array()
+	i = 0
+	while i < keyArr.length
+		switch keyArr[i]
 			when '('
 				i++
-				while noteArr[i] isnt ')'
-					if noteArr[i] not in [' ', '\n', '\t']
-						parenArr.push '(' + noteArr[i] + ')'
+				while keyArr[i] isnt ')'
+					if keyArr[i] not in [' ', '\n', '\t']
+						rebuildArr.push '(' + keyArr[i] + ')'
 					else
-						parenArr.push noteArr[i]
+						rebuildArr.push keyArr[i]
 					i++
 			when '['
 				i++
-				while noteArr[i] isnt ']'
-					if noteArr[i] not in [' ', '\n', '\t']
-						parenArr.push '[' + noteArr[i] + ']'
+				while keyArr[i] isnt ']'
+					if keyArr[i] not in [' ', '\n', '\t']
+						rebuildArr.push '[' + keyArr[i] + ']'
 					else
-						parenArr.push noteArr[i]
+						rebuildArr.push keyArr[i]
 					i++
 			when '{'
 				i++
-				while noteArr[i] isnt '}'
-					if noteArr[i] not in [' ', '\n', '\t']
-						parenArr.push '{' + noteArr[i] + '}'
+				while keyArr[i] isnt '}'
+					if keyArr[i] not in [' ', '\n', '\t']
+						rebuildArr.push '{' + keyArr[i] + '}'
 					else
-						parenArr.push noteArr[i]
+						rebuildArr.push keyArr[i]
 					i++
 			else
-				parenArr.push noteArr[i]
+				rebuildArr.push keyArr[i]
 		i++
-	return parenArr
+	return rebuildArr.join('')
 
 rl.on "line", (line) ->
 	lineNum++
-	# scoreCheck line
-	console.log scoreEncode line
-	console.log (parenAdd scoreEncode line).join('')
+	try
+		parenCheck parenSplit keyCheck keySplit line
+		console.log scoreRebuild keyCheck keySplit line
+	catch error
+		console.log error
