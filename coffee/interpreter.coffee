@@ -14,24 +14,17 @@ rl = readline.createInterface
 
 lineNum = 0
 
-scoreCheck = (line) ->
-	validArr = [' ', '\n', '\t', '#', '(', ')', '{', '}', '[', ']', '<', '>', '0', '1', '2', '3', '4', '5', '6', '7']
-	for char in line
-		if char not in validArr
-			throw new Error "Invalid music note \'#{char}\'."
-
 scoreEncode = (line) ->
 	noteArr = new Array()
 	i = 0
 	while i < line.length
-		switch line[i] #is '#'
+		switch line[i]
 			when '#'
-				if line[i + 1] in ['0', '1', '2', '3', '4', '5', '6', '7']
-					noteArr.push '#' + line[i + 1]
-					# process.stdout.write comp_dict[line[i + 1]]
-					i++
-				else
-					throw new Error "Invalid express \'##{line[i + 1]}\' at Line #{lineNum}, Column #{i + 1}: \n\n\t#{line}\n"
+				noteArr.push '#' + line[i + 1]
+				# process.stdout.write comp_dict[line[i + 1]]
+				i++
+				# else
+					# throw new Error "Invalid express \'##{line[i + 1]}\' at Line #{lineNum}, Column #{i + 1}: \n\n\t#{line}\n"
 			when ';'
 				noteArr.push line[i..line.length]
 				i = line.length
@@ -41,41 +34,48 @@ scoreEncode = (line) ->
 		i++
 	return noteArr
 
-parenAdd = (arr) ->
+scoreCheck = (noteArr) ->
+	validArr = [' ', '\n', '\t', '#', '(', ')', '{', '}', '[', ']', '<', '>', '0', '1', '2', '3', '4', '5', '6', '7']
+	for char in noteArr
+		if char not in validArr
+			throw new Error "Invalid music note \'#{char}\'."
+
+parenAdd = (noteArr) ->
 	parenArr = new Array()
 	i = 0
-	while i < arr.length
-		switch arr[i]
+	while i < noteArr.length
+		switch noteArr[i]
 			when '('
 				i++
-				while arr[i] isnt ')'
-					if arr[i] not in [' ', '\n', '\t']
-						parenArr.push '(' + arr[i] + ')'
+				while noteArr[i] isnt ')'
+					if noteArr[i] not in [' ', '\n', '\t']
+						parenArr.push '(' + noteArr[i] + ')'
 					else
-						parenArr.push arr[i]
+						parenArr.push noteArr[i]
 					i++
 			when '['
 				i++
-				while arr[i] isnt ']'
-					if arr[i] not in [' ', '\n', '\t']
-						parenArr.push '[' + arr[i] + ']'
+				while noteArr[i] isnt ']'
+					if noteArr[i] not in [' ', '\n', '\t']
+						parenArr.push '[' + noteArr[i] + ']'
 					else
-						parenArr.push arr[i]
+						parenArr.push noteArr[i]
 					i++
 			when '{'
 				i++
-				while arr[i] isnt '}'
-					if arr[i] not in [' ', '\n', '\t']
-						parenArr.push '{' + arr[i] + '}'
+				while noteArr[i] isnt '}'
+					if noteArr[i] not in [' ', '\n', '\t']
+						parenArr.push '{' + noteArr[i] + '}'
 					else
-						parenArr.push arr[i]
+						parenArr.push noteArr[i]
 					i++
 			else
-				parenArr.push arr[i]
+				parenArr.push noteArr[i]
 		i++
 	return parenArr
 
 rl.on "line", (line) ->
 	lineNum++
 	# scoreCheck line
+	console.log scoreEncode line
 	console.log (parenAdd scoreEncode line).join('')
