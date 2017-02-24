@@ -45,7 +45,7 @@ keyCheck = (keyArr) ->
 	for key in keyArr
 		i += key.length
 		if key not in validArr and key[0] isnt ';'
-			throw new Error "Invalid key \'#{key}\' at Line #{lineNum}, Colomn #{i}:\n\n\t#{keyArr.join('')}\n"
+			throw new Error "Line #{lineNum}, Colomn #{i}: Invalid key \'#{key}\' after automatical key split:\n\n\t#{keyArr.join('')}\n"
 	return keyArr
 
 parenSplit = (keyArr) ->
@@ -76,9 +76,11 @@ parenSplit = (keyArr) ->
 				else if keyArr[keyArr.length - 1] is '\n'
 					keyArr[keyArr.length - 1] = ')'
 					keyArr.push('\n')
+					parenArr.push(keyArr[i...keyArr.length - 1])
+					i = keyArr.length - 1
 				else
 					keyArr.push(')')
-					parenArr.push(keyArr[i..keyArr.length])
+					parenArr.push(keyArr[i...keyArr.length])
 					i = keyArr.length
 			when '['
 				if tempArr.length
@@ -90,9 +92,11 @@ parenSplit = (keyArr) ->
 				else if keyArr[keyArr.length - 1] is '\n'
 					keyArr[keyArr.length - 1] = ']'
 					keyArr.push('\n')
+					parenArr.push(keyArr[i...keyArr.length - 1])
+					i = keyArr.length - 1
 				else
 					keyArr.push(']')
-					parenArr.push(keyArr[i..keyArr.length])
+					parenArr.push(keyArr[i...keyArr.length])
 					i = keyArr.length
 			when '{'
 				if tempArr.length
@@ -104,9 +108,11 @@ parenSplit = (keyArr) ->
 				else if keyArr[keyArr.length - 1] is '\n'
 					keyArr[keyArr.length - 1] = '}'
 					keyArr.push('\n')
+					parenArr.push(keyArr[i...keyArr.length - 1])
+					i = keyArr.length - 1
 				else
 					keyArr.push('}')
-					parenArr.push(keyArr[i..keyArr.length])
+					parenArr.push(keyArr[i...keyArr.length])
 					i = keyArr.length
 			else
 				if keyArr[i][0] isnt ';'
@@ -124,11 +130,11 @@ parenCheck = (parenArr) ->
 			testArr = arr
 		for paren in ['(', ')', '[', ']', '{', '}']
 			if paren in testArr
-				i += arr.indexOf(paren) + 1
+				i += testArr.indexOf(paren) + 2
 				str = ''
 				for x in parenArr
 					str += x.join('')
-				throw new Error "Unexpected \'#{paren}\' at Line #{lineNum}, Colomn #{i}:\n\n\t#{str}\n"
+				throw new Error "Line #{lineNum}, Colomn #{i}: Unexpected \'#{paren}\' after automatical parentheses completion:\n\n\t#{str}\n"
 		i += arr.join('').length
 	return parenArr
 
