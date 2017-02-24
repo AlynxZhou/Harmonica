@@ -32,7 +32,6 @@ keySplit = (line) ->
 			when '#'
 				keyArr.push '#' + line[i + 1]
 				i++
-					# throw new Error "Invalid express \'##{line[i + 1]}\' at Line #{lineNum}, Column #{i + 1}: \n\n\t#{line}\n"
 			when ';'
 				keyArr.push line[i..line.length]
 				i = line.length
@@ -74,6 +73,9 @@ parenSplit = (keyArr) ->
 				if keyArr[i...keyArr.length].indexOf(')') isnt -1
 					parenArr.push(keyArr[i..keyArr.indexOf(')')])
 					i += keyArr[i...keyArr.length].indexOf(')')
+				else if keyArr[keyArr.length - 1] is '\n'
+					keyArr[keyArr.length - 1] = ')'
+					keyArr.push('\n')
 				else
 					keyArr.push(')')
 					parenArr.push(keyArr[i..keyArr.length])
@@ -85,6 +87,9 @@ parenSplit = (keyArr) ->
 				if keyArr[i...keyArr.length].indexOf(']') isnt -1
 					parenArr.push(keyArr[i..keyArr.indexOf(']')])
 					i += keyArr[i...keyArr.length].indexOf(']')
+				else if keyArr[keyArr.length - 1] is '\n'
+					keyArr[keyArr.length - 1] = ']'
+					keyArr.push('\n')
 				else
 					keyArr.push(']')
 					parenArr.push(keyArr[i..keyArr.length])
@@ -96,6 +101,9 @@ parenSplit = (keyArr) ->
 				if keyArr[i...keyArr.length].indexOf('}') isnt -1
 					parenArr.push(keyArr[i..keyArr.indexOf('}')])
 					i += keyArr[i...keyArr.length].indexOf('}')
+				else if keyArr[keyArr.length - 1] is '\n'
+					keyArr[keyArr.length - 1] = '}'
+					keyArr.push('\n')
 				else
 					keyArr.push('}')
 					parenArr.push(keyArr[i..keyArr.length])
