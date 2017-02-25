@@ -14,6 +14,7 @@ commander
 	.description "An interpreter of number music scores."
 	.usage "[options] <file1 file2 ... files>"
 	.option "-d, --debug", "Return an array of score error point."
+	.option "-m, --move <int>", "Move the key.", parseInt
 	.parse process.argv
 
 # file = commander.file
@@ -22,7 +23,17 @@ if commander.args.length
 else
 	streamArr = [process.stdin]
 
-validArr = [' ', '\n', '\t', '#', '/', '|', '(', ')', '{', '}', '[', ']', '<', '>', '0', '1', '2', '3', '4', '5', '6', '7', '#1', '#2', '#3', '#4', '#5', '#6', '#7']
+if commander.move not in [-12..+12]
+	throw new Error "Error: Please use numbers between -12 and +12."
+
+validArr = [' ', '\n', '\t', '#', '/', '|',
+	    '(', ')', '{', '}', '[', ']', '<', '>',
+	    '0', '1', '2', '3', '4', '5', '6', '7',
+	    '#1', '#2', '#3', '#4', '#5', '#6', '#7']
+keySeq = ['(1)', '(#1)', '(2)', '(#2)', '(3)', '(4)', '(#4)', '(5)', '(#5)', '(6)', '(#6)', '(7)',
+	  '1', '#1', '2', '#2', '3', '4', '#4', '5', '#5', '6', '#6', '7',
+	  '[1]', '[#1]', '[2]', '[#2]', '[3]', '[4]', '[#4]', '[5]', '[#5]', '[6]', '[#6]', '[7]',
+	  '{1}', '{#1}', '{2}', '{#2}', '{3}', '{4}', '{#4}', '{5}', '{#5}', '{6}', '{#6}', '{7}']
 
 lineNum = 0
 
@@ -204,7 +215,30 @@ scoreRebuild = (keyArr) ->
 			else
 				rebuildArr.push keyArr[i]
 		i++
-	return rebuildArr.join ''
+	return rebuildArr
+
+fixKey = (rebuildArr) ->
+	fixedArr = new Array()
+	for key in rebuildArr
+		switch key
+			when '(#3)' then fixedArr.push '(4)'
+			when '(#7)' then fixedArr.push '1'
+			when '#3' then fixedArr.push '4'
+			when '#7' then fixedArr.push '[1]'
+			when '[#3]' then fixedArr.push '[4]'
+			when '[#7]' then fixedArr.push '{1}'
+			when '{#3}' then fixedArr.push '{4}'
+			else fixedArr.push key
+	return fixedArr
+
+moveKey = (fixedArr, moveStep) ->
+	movedArr = new Array()
+	for key in fixedArr
+		if keySeq.indexOf(key) isnt -1 and keySeq.indexOf(key) + moveStep in [0...keySeq.length]
+			movedArr.push keySeq[keySeq.indexOf(key) + moveStep]
+		else
+			return "---\nError: Cannot move #{key} with #{moveStep} steps.\n---"
+	return movedArr.join ''
 
 handleFile = (fileStream) ->
 	lineNum = 0
@@ -226,27 +260,50 @@ handleFile = (fileStream) ->
 				errArrs = errArrs.concat keyErrArr
 				errArrs = errArrs.concat parenErrArr
 	else
-		rl.on "line", (line) ->
-			lineNum++
-			keyArr = keySplit line
-			keyErrArr = keyCheck keyArr
-			parenArr = parenSplit keyArr
-			parenErrArr = parenCheck parenArr
-			if keyErrArr.length or parenErrArr.length
-				errArrs = []
-				errArrs = errArrs.concat keyErrArr
-				errArrs = errArrs.concat parenErrArr
-				for arr in errArrs
-					console.log  "---\nError: Line #{lineNum}, Colomn #{arr[1]}:"
-					console.log  "Error: #{line}"
-					i = 0
-					output =  "Error: "
-					while i < arr[1] - 1
-						output = output.concat ' '
-						i++
-					console.log "#{output}^\n---"
-			else
-				console.log scoreRebuild keyArr
+		if commander.move
+			rl.on "line", (line) ->
+				lineNum++
+				keyArr = keySplit line
+				keyErrArr = keyCheck keyArr
+				parenArr = parenSplit keyArr
+				parenErrArr = parenCheck parenArr
+				if keyErrArr.length or parenErrArr.length
+					errArrs = []
+					errArrs = errArrs.concat keyErrArr
+					errArrs = errArrs.concat parenErrArr
+					for arr in errArrs
+						console.log  "---\nError: Line #{lineNum}, Colomn #{arr[1]}:"
+						console.log  "Error: #{line}"
+						i = 0
+						output =  "Error: "
+						while i < arr[1] - 1
+							output = output.concat ' '
+							i++
+						console.log "#{output}^\n---"
+				else
+					console.log moveKey(fixKey(scoreRebuild(keyArr)), commander.move)
+		else
+			rl.on "line", (line) ->
+				lineNum++
+				keyArr = keySplit line
+				keyErrArr = keyCheck keyArr
+				parenArr = parenSplit keyArr
+				parenErrArr = parenCheck parenArr
+				if keyErrArr.length or parenErrArr.length
+					errArrs = []
+					errArrs = errArrs.concat keyErrArr
+					errArrs = errArrs.concat parenErrArr
+					for arr in errArrs
+						console.log  "---\nError: Line #{lineNum}, Colomn #{arr[1]}:"
+						console.log  "Error: #{line}"
+						i = 0
+						output =  "Error: "
+						while i < arr[1] - 1
+							output = output.concat ' '
+							i++
+						console.log "#{output}^\n---"
+				else
+					console.log scoreRebuild(keyArr).join ''
 
 	rl.on 'close', () ->
 		if commander.debug
