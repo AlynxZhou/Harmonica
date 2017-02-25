@@ -7,11 +7,18 @@
 
 fs = require "fs"
 readline = require "readline"
+commander = require "commander"
 
-file = process.argv[2]
+commander
+	.version "0.1.0"
+	.description "An interpreter of number music scores."
+	.usage "[options] <file>"
+	.option "-d, --debug", "Return an array of score error point."
+	.parse process.argv
 
-if file?
-	inputStream = fs.createReadStream file
+# file = commander.file
+if commander.args.length
+	inputStream = fs.createReadStream commander.args[0]
 else
 	inputStream = process.stdin
 
@@ -212,22 +219,33 @@ rl.on "line", (line) ->
 	keyErrArr = keyCheck keyArr
 	parenArr = parenSplit keyArr
 	parenErrArr = parenCheck parenArr
-	if keyErrArr.length or parenErrArr.length
-		errArrs = []
-		errArrs = errArrs.concat keyErrArr
-		errArrs = errArrs.concat parenErrArr
-		for arr in errArrs
-			console.log "Error: #{line} at Line #{lineNum}."
-			i = 0
-			while i < arr[1] + 6
-				process.stdout.write ' '
-				i++
-			console.log "^\n"
-		# console.log errArrs
-		# console.log "Find KeyError location at #{keyErrArr} and/or ParenError location at #{parenErrArr}."
-		# console.log errJson
-	# else
-		# console.log scoreRebuild keyArr
+	if commander.debug
+		if keyErrArr.length or parenErrArr.length
+			errArrs = errArrs.concat keyErrArr
+			errArrs = errArrs.concat parenErrArr
+	else
+		if keyErrArr.length or parenErrArr.length
+			errArrs = []
+			errArrs = errArrs.concat keyErrArr
+			errArrs = errArrs.concat parenErrArr
+			for arr in errArrs
+				console.log "\nError: Line #{lineNum}, Colomn #{arr[1]}:"
+				console.log "        #{line}"
+				i = 0
+				while i < arr[1] + 7
+					process.stdout.write ' '
+					i++
+				console.log "^\n"
+			# console.log errArrs
+			# console.log "Find KeyError location at #{keyErrArr} and/or ParenError location at #{parenErrArr}."
+			# console.log errJson
+		else
+			console.log scoreRebuild keyArr
+
+rl.on 'close', () ->
+	if commander.debug
+		console.log errArrs
+		return errArrs
 
 ###
 errArrOsort = (errArrs) ->
