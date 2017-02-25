@@ -23,7 +23,7 @@ if commander.args.length
 else
 	streamArr = [process.stdin]
 
-if commander.move not in [-12..+12]
+if commander.move? and commander.move not in [-12..+12]
 	throw new Error "Error: Please use numbers between -12 and +12."
 
 validArr = [' ', '\n', '\t', '#', '/', '|',
@@ -231,14 +231,15 @@ fixKey = (rebuildArr) ->
 			else fixedArr.push key
 	return fixedArr
 
-moveKey = (fixedArr, moveStep) ->
+printMovedKey = (fixedArr, moveStep) ->
 	movedArr = new Array()
 	for key in fixedArr
 		if keySeq.indexOf(key) isnt -1 and keySeq.indexOf(key) + moveStep in [0...keySeq.length]
 			movedArr.push keySeq[keySeq.indexOf(key) + moveStep]
 		else
-			return "---\nError: Cannot move #{key} with #{moveStep} steps.\n---"
-	return movedArr.join ''
+			console.error "---\nError: Cannot move #{key} with #{moveStep} steps.\n---"
+			return
+	console.log movedArr.join ''
 
 handleFile = (fileStream) ->
 	lineNum = 0
@@ -272,16 +273,16 @@ handleFile = (fileStream) ->
 					errArrs = errArrs.concat keyErrArr
 					errArrs = errArrs.concat parenErrArr
 					for arr in errArrs
-						console.log  "---\nError: Line #{lineNum}, Colomn #{arr[1]}:"
-						console.log  "Error: #{line}"
+						console.error  "---\nError: Line #{lineNum}, Colomn #{arr[1]}:"
+						console.error  "Error: #{line}"
 						i = 0
 						output =  "Error: "
 						while i < arr[1] - 1
 							output = output.concat ' '
 							i++
-						console.log "#{output}^\n---"
+						console.error "#{output}^\n---"
 				else
-					console.log moveKey(fixKey(scoreRebuild(keyArr)), commander.move)
+					printMovedKey(fixKey(scoreRebuild(keyArr)), commander.move)
 		else
 			rl.on "line", (line) ->
 				lineNum++
@@ -294,14 +295,14 @@ handleFile = (fileStream) ->
 					errArrs = errArrs.concat keyErrArr
 					errArrs = errArrs.concat parenErrArr
 					for arr in errArrs
-						console.log  "---\nError: Line #{lineNum}, Colomn #{arr[1]}:"
-						console.log  "Error: #{line}"
+						console.error  "---\nError: Line #{lineNum}, Colomn #{arr[1]}:"
+						console.error  "Error: #{line}"
 						i = 0
 						output =  "Error: "
 						while i < arr[1] - 1
 							output = output.concat ' '
 							i++
-						console.log "#{output}^\n---"
+						console.error "#{output}^\n---"
 				else
 					console.log scoreRebuild(keyArr).join ''
 
