@@ -9,12 +9,24 @@ fs = require "fs"
 readline = require "readline"
 commander = require "commander"
 
+valueSeq = ['C', '#C', 'D', '#D', 'E', 'F', '#F', 'G', '#G', 'A', '#A', 'B']
+validArr = [' ', '\n', '\t', '|',
+	    '(', ')', '{', '}', '[', ']', '<', '>',
+	    '0', '1', '2', '3', '4', '5', '6', '7',
+	    '#1', '#2', '#3', '#4', '#5', '#6', '#7']
+keySeq = ['(1)', '(#1)', '(2)', '(#2)', '(3)', '(4)', '(#4)', '(5)', '(#5)', '(6)', '(#6)', '(7)',
+	  '1', '#1', '2', '#2', '3', '4', '#4', '5', '#5', '6', '#6', '7',
+	  '[1]', '[#1]', '[2]', '[#2]', '[3]', '[4]', '[#4]', '[5]', '[#5]', '[6]', '[#6]', '[7]',
+	  '{1}', '{#1}', '{2}', '{#2}', '{3}', '{4}', '{#4}', '{5}', '{#5}', '{6}', '{#6}', '{7}']
+
 commander
 	.version "0.1.0"
 	.description "An interpreter of number music scores."
 	.usage "[options] <file1 file2 ... files>"
 	.option "-d, --debug", "Return an array of score error point."
 	.option "-m, --move <int>", "Move the key.", parseInt
+	.option "-f, --from [value]", "From which key."
+	.option "-t, --to [value]", "To which key."
 	.parse process.argv
 
 # file = commander.file
@@ -25,15 +37,16 @@ else
 
 if commander.move? and commander.move not in [-12..+12]
 	throw new Error "Error: Please use numbers between -12 and +12."
-
-validArr = [' ', '\n', '\t', '|',
-	    '(', ')', '{', '}', '[', ']', '<', '>',
-	    '0', '1', '2', '3', '4', '5', '6', '7',
-	    '#1', '#2', '#3', '#4', '#5', '#6', '#7']
-keySeq = ['(1)', '(#1)', '(2)', '(#2)', '(3)', '(4)', '(#4)', '(5)', '(#5)', '(6)', '(#6)', '(7)',
-	  '1', '#1', '2', '#2', '3', '4', '#4', '5', '#5', '6', '#6', '7',
-	  '[1]', '[#1]', '[2]', '[#2]', '[3]', '[4]', '[#4]', '[5]', '[#5]', '[6]', '[#6]', '[7]',
-	  '{1}', '{#1}', '{2}', '{#2}', '{3}', '{4}', '{#4}', '{5}', '{#5}', '{6}', '{#6}', '{7}']
+else if commander.from? or commander.to?
+	if not commander.from?
+		commander.from = 'C'
+	if not commander.to?
+		commander.to = 'C'
+	commander.from = commander.from.toUpperCase()
+	commander.to = commander.to.toUpperCase()
+	if not commander.from in valueSeq or not commander.to in valueSeq
+		throw new Error "Error: Invalid key."
+	commander.move = valueSeq.indexOf(commander.from) - valueSeq.indexOf(commander.to)
 
 lineNum = 0
 
