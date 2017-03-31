@@ -22,3 +22,17 @@ Scores of Harmonica Music.
 |附点音符|1.|
 |小节线|\||
 |和声|<<1 2 3>>||
+
+3. 有关附带coffee脚本的注意事项：
+
+mover.coffee能够进行移调的乐谱必须经过formatter.coffee处理过格式，否则遇到语法/语义错误会导致程序运行错误！
+
+mover.coffee本身没有对乐谱进行语法检查的功能，仅仅能够接受格式完全正确的乐谱进行转调。
+
+为保证安全请使用：
+
+````
+$ ./formatter.coffee FILE | ./mover.coffee -f FROM -t TO
+````
+
+的方式进行转调，遇到转调后无法表示的音符mover.coffee会自动抛出错误并退出。
