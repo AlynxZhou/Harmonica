@@ -26,7 +26,7 @@ else
 if commander.move? and commander.move not in [-12..+12]
 	throw new Error "Error: Please use numbers between -12 and +12."
 
-validArr = [' ', '\n', '\t', '#', '/', '|',
+validArr = [' ', '\n', '\t', '|',
 	    '(', ')', '{', '}', '[', ']', '<', '>',
 	    '0', '1', '2', '3', '4', '5', '6', '7',
 	    '#1', '#2', '#3', '#4', '#5', '#6', '#7']
@@ -43,7 +43,10 @@ keySplit = (line) ->
 	while i < line.length
 		switch line[i]
 			when '#'
-				keyArr.push '#' + line[i + 1]
+				if i + 1 < line.length
+					keyArr.push '#' + line[i + 1]
+				else
+					keyArr.push '#'	# If no if-else it will push a #undefined wrongly, and the error columnNum will be wrong.
 				i++
 			when ';'
 				keyArr.push line[i..line.length]
@@ -237,8 +240,9 @@ printMovedKey = (fixedArr, moveStep) ->
 		if keySeq.indexOf(key) isnt -1 and keySeq.indexOf(key) + moveStep in [0...keySeq.length]
 			movedArr.push keySeq[keySeq.indexOf(key) + moveStep]
 		else
-			console.error "---\nError: Cannot move #{key} with #{moveStep} steps.\n---"
-			return
+			movedArr.push key
+			# console.error "---\nError: Cannot move #{key} with #{moveStep} steps.\n---"
+			# return
 	console.log movedArr.join ''
 
 handleFile = (fileStream) ->
