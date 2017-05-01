@@ -122,7 +122,7 @@ parenSplit = (keyArr) ->
 					parenArr.push(tempArr)
 					tempArr = []
 				if keyArr[i...keyArr.length].indexOf('}') isnt -1
-					parenArr.push(keyArr[i..i + keyArr[i...keyArr.length].indexOf(')}')])
+					parenArr.push(keyArr[i..i + keyArr[i...keyArr.length].indexOf('}')])
 					i += keyArr[i...keyArr.length].indexOf('}')
 				else if keyArr[keyArr.length - 1] is '\n'
 					keyArr[keyArr.length - 1] = '}'
