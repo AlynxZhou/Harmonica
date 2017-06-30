@@ -1,0 +1,244 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Application	pymusic.py	/^class Application(Tk):$/;"	c
+Command	coffee/node_modules/commander/index.js	/^function Command(name) {$/;"	c
+Command.__proto__	coffee/node_modules/commander/index.js	/^Command.prototype.__proto__ = EventEmitter.prototype;$/;"	m
+Command.action	coffee/node_modules/commander/index.js	/^Command.prototype.action = function(fn) {$/;"	m
+Command.addImplicitHelpCommand	coffee/node_modules/commander/index.js	/^Command.prototype.addImplicitHelpCommand = function() {$/;"	m
+Command.alias	coffee/node_modules/commander/index.js	/^Command.prototype.alias = function(alias) {$/;"	m
+Command.allowUnknownOption	coffee/node_modules/commander/index.js	/^Command.prototype.allowUnknownOption = function(arg) {$/;"	m
+Command.arguments	coffee/node_modules/commander/index.js	/^Command.prototype.arguments = function (desc) {$/;"	m
+Command.cb	coffee/node_modules/commander/index.js	/^  if (!cb) {$/;"	f
+Command.command	coffee/node_modules/commander/index.js	/^Command.prototype.command = function(name, desc, opts) {$/;"	m
+Command.commandHelp	coffee/node_modules/commander/index.js	/^Command.prototype.commandHelp = function() {$/;"	m
+Command.description	coffee/node_modules/commander/index.js	/^Command.prototype.description = function(str) {$/;"	m
+Command.executeSubCommand	coffee/node_modules/commander/index.js	/^Command.prototype.executeSubCommand = function(argv, args, unknown) {$/;"	m
+Command.fn	coffee/node_modules/commander/index.js	/^      var regex = fn;$/;"	f
+Command.help	coffee/node_modules/commander/index.js	/^Command.prototype.help = function(cb) {$/;"	m
+Command.helpInformation	coffee/node_modules/commander/index.js	/^Command.prototype.helpInformation = function() {$/;"	m
+Command.largestOptionLength	coffee/node_modules/commander/index.js	/^Command.prototype.largestOptionLength = function() {$/;"	m
+Command.missingArgument	coffee/node_modules/commander/index.js	/^Command.prototype.missingArgument = function(name) {$/;"	m
+Command.name	coffee/node_modules/commander/index.js	/^Command.prototype.name = function() {$/;"	m
+Command.option	coffee/node_modules/commander/index.js	/^Command.prototype.option = function(flags, description, fn, defaultValue) {$/;"	m
+Command.optionFor	coffee/node_modules/commander/index.js	/^Command.prototype.optionFor = function(arg) {$/;"	m
+Command.optionHelp	coffee/node_modules/commander/index.js	/^Command.prototype.optionHelp = function() {$/;"	m
+Command.optionMissingArgument	coffee/node_modules/commander/index.js	/^Command.prototype.optionMissingArgument = function(option, flag) {$/;"	m
+Command.opts	coffee/node_modules/commander/index.js	/^Command.prototype.opts = function() {$/;"	m
+Command.outputHelp	coffee/node_modules/commander/index.js	/^Command.prototype.outputHelp = function(cb) {$/;"	m
+Command.parse	coffee/node_modules/commander/index.js	/^Command.prototype.parse = function(argv) {$/;"	m
+Command.parseArgs	coffee/node_modules/commander/index.js	/^Command.prototype.parseArgs = function(args, unknown) {$/;"	m
+Command.parseExpectedArgs	coffee/node_modules/commander/index.js	/^Command.prototype.parseExpectedArgs = function(args) {$/;"	m
+Command.parseOptions	coffee/node_modules/commander/index.js	/^Command.prototype.parseOptions = function(argv) {$/;"	m
+Command.unknownOption	coffee/node_modules/commander/index.js	/^Command.prototype.unknownOption = function(flag) {$/;"	m
+Command.usage	coffee/node_modules/commander/index.js	/^Command.prototype.usage = function(str) {$/;"	m
+Command.var.listener	coffee/node_modules/commander/index.js	/^  var listener = function(args, unknown) {$/;"	f
+Command.variadicArgNotLast	coffee/node_modules/commander/index.js	/^Command.prototype.variadicArgNotLast = function(name) {$/;"	m
+Command.version	coffee/node_modules/commander/index.js	/^Command.prototype.version = function(str, flags) {$/;"	m
+EventEmitter	coffee/node_modules/commander/index.js	/^var EventEmitter = require('events').EventEmitter;$/;"	v
+Option	coffee/node_modules/commander/index.js	/^function Option(flags, description) {$/;"	c
+Option.is	coffee/node_modules/commander/index.js	/^Option.prototype.is = function(arg) {$/;"	m
+Option.name	coffee/node_modules/commander/index.js	/^Option.prototype.name = function() {$/;"	m
+__author__	pymusic.py	/^__author__ = "请叫我喵 Alynx"$/;"	v
+__init__	pymusic.py	/^	def __init__(self, master=None):$/;"	m	class:Application
+__version__	pymusic.py	/^__version__ = "0.3.0"$/;"	v
+_args	coffee/node_modules/commander/package.json	/^  "_args": [$/;"	f
+_args	coffee/node_modules/graceful-readlink/package.json	/^  "_args": [$/;"	f
+_cnpm_publish_time	coffee/node_modules/commander/package.json	/^  "_cnpm_publish_time": 1444749985933,$/;"	f
+_cnpm_publish_time	coffee/node_modules/graceful-readlink/package.json	/^  "_cnpm_publish_time": 1423714736538,$/;"	f
+_from	coffee/node_modules/commander/package.json	/^  "_from": "commander@latest",$/;"	f
+_from	coffee/node_modules/graceful-readlink/package.json	/^  "_from": "graceful-readlink@>=1.0.0",$/;"	f
+_id	coffee/node_modules/commander/package.json	/^  "_id": "commander@2.9.0",$/;"	f
+_id	coffee/node_modules/graceful-readlink/package.json	/^  "_id": "graceful-readlink@1.0.1",$/;"	f
+_inCache	coffee/node_modules/commander/package.json	/^  "_inCache": true,$/;"	f
+_inCache	coffee/node_modules/graceful-readlink/package.json	/^  "_inCache": true,$/;"	f
+_location	coffee/node_modules/commander/package.json	/^  "_location": "\/commander",$/;"	f
+_location	coffee/node_modules/graceful-readlink/package.json	/^  "_location": "\/graceful-readlink",$/;"	f
+_nodeVersion	coffee/node_modules/commander/package.json	/^  "_nodeVersion": "0.12.7",$/;"	f
+_nodeVersion	coffee/node_modules/graceful-readlink/package.json	/^  "_nodeVersion": "0.11.14",$/;"	f
+_npmUser	coffee/node_modules/commander/package.json	/^  "_npmUser": {$/;"	f
+_npmUser	coffee/node_modules/graceful-readlink/package.json	/^  "_npmUser": {$/;"	f
+_npmVersion	coffee/node_modules/commander/package.json	/^  "_npmVersion": "2.11.3",$/;"	f
+_npmVersion	coffee/node_modules/graceful-readlink/package.json	/^  "_npmVersion": "2.1.17",$/;"	f
+_phantomChildren	coffee/node_modules/commander/package.json	/^  "_phantomChildren": {},$/;"	f
+_phantomChildren	coffee/node_modules/graceful-readlink/package.json	/^  "_phantomChildren": {},$/;"	f
+_requested	coffee/node_modules/commander/package.json	/^  "_requested": {$/;"	f
+_requested	coffee/node_modules/graceful-readlink/package.json	/^  "_requested": {$/;"	f
+_requiredBy	coffee/node_modules/commander/package.json	/^  "_requiredBy": [$/;"	f
+_requiredBy	coffee/node_modules/graceful-readlink/package.json	/^  "_requiredBy": [$/;"	f
+_resolved	coffee/node_modules/commander/package.json	/^  "_resolved": "https:\/\/registry.npmjs.org\/commander\/-\/commander-2.9.0.tgz",$/;"	f
+_resolved	coffee/node_modules/graceful-readlink/package.json	/^  "_resolved": "https:\/\/registry.npmjs.org\/graceful-readlink\/-\/graceful-readlink-1.0.1.tgz",$/;"	f
+_shasum	coffee/node_modules/commander/package.json	/^  "_shasum": "9c99094176e12240cb22d6c5146098400fe0f7d4",$/;"	f
+_shasum	coffee/node_modules/graceful-readlink/package.json	/^  "_shasum": "4cafad76bc62f02fa039b2f94e9a3dd3a391a725",$/;"	f
+_shrinkwrap	coffee/node_modules/commander/package.json	/^  "_shrinkwrap": null,$/;"	f
+_shrinkwrap	coffee/node_modules/graceful-readlink/package.json	/^  "_shrinkwrap": null,$/;"	f
+_spec	coffee/node_modules/commander/package.json	/^  "_spec": "commander",$/;"	f
+_spec	coffee/node_modules/graceful-readlink/package.json	/^  "_spec": "graceful-readlink@>= 1.0.0",$/;"	f
+_where	coffee/node_modules/commander/package.json	/^  "_where": "\/home\/alynx\/Harmonica\/coffee",$/;"	f
+_where	coffee/node_modules/graceful-readlink/package.json	/^  "_where": "\/home\/alynx\/Harmonica\/coffee\/node_modules\/commander",$/;"	f
+author	coffee/node_modules/commander/package.json	/^  "author": {$/;"	f
+author	coffee/node_modules/graceful-readlink/package.json	/^  "author": {$/;"	f
+basename	coffee/node_modules/commander/index.js	/^var basename = path.basename;$/;"	v
+bugs	coffee/node_modules/commander/package.json	/^  "bugs": {$/;"	f
+bugs	coffee/node_modules/graceful-readlink/package.json	/^  "bugs": {$/;"	f
+camelcase	coffee/node_modules/commander/index.js	/^function camelcase(flag) {$/;"	f
+columnNum	coffee/formatter.coffee	/^	columnNum = 0$/;"	v
+commander.from	coffee/mover.coffee	/^		commander.from = 'C'$/;"	v
+commander.to	coffee/mover.coffee	/^		commander.to = 'C'$/;"	v
+conv_dict	pymusic.py	/^conv_dict = {$/;"	v
+convent	pymusic.py	/^	def convent(self):$/;"	m	class:Application
+create_button	pymusic.py	/^	def create_button(self):$/;"	m	class:Application
+create_input	pymusic.py	/^	def create_input(self):$/;"	m	class:Application
+create_output	pymusic.py	/^	def create_output(self):$/;"	m	class:Application
+dependencies	coffee/node_modules/commander/package.json	/^  "dependencies": {$/;"	f
+dependencies	coffee/node_modules/graceful-readlink/package.json	/^  "dependencies": {},$/;"	f
+description	coffee/node_modules/commander/package.json	/^  "description": "the complete solution for node.js command-line programs",$/;"	f
+description	coffee/node_modules/graceful-readlink/package.json	/^  "description": "graceful fs.readlink",$/;"	f
+devDependencies	coffee/node_modules/commander/package.json	/^  "devDependencies": {$/;"	f
+devDependencies	coffee/node_modules/graceful-readlink/package.json	/^  "devDependencies": {},$/;"	f
+directories	coffee/node_modules/commander/package.json	/^  "directories": {},$/;"	f
+directories	coffee/node_modules/graceful-readlink/package.json	/^  "directories": {},$/;"	f
+dirname	coffee/node_modules/commander/index.js	/^var dirname = path.dirname;$/;"	v
+dist	coffee/node_modules/commander/package.json	/^  "dist": {$/;"	f
+dist	coffee/node_modules/graceful-readlink/package.json	/^  "dist": {$/;"	f
+email	coffee/node_modules/commander/package.json	/^      "email": "rkoutnik@gmail.com"$/;"	f
+email	coffee/node_modules/commander/package.json	/^      "email": "tj@vision-media.ca"$/;"	f
+email	coffee/node_modules/commander/package.json	/^      "email": "zhiyelee@gmail.com"$/;"	f
+email	coffee/node_modules/commander/package.json	/^    "email": "tj@vision-media.ca"$/;"	f
+email	coffee/node_modules/commander/package.json	/^    "email": "zhiyelee@gmail.com"$/;"	f
+email	coffee/node_modules/graceful-readlink/package.json	/^      "email": "zhiyelee@gmail.com"$/;"	f
+email	coffee/node_modules/graceful-readlink/package.json	/^    "email": "zhiyelee@gmail.com"$/;"	f
+engines	coffee/node_modules/commander/package.json	/^  "engines": {$/;"	f
+errArrs	coffee/formatter.coffee	/^				errArrs = []$/;"	v
+errArrs	coffee/formatter.coffee	/^	errArrs = []$/;"	v
+errArrs	coffee/mover.coffee	/^	errArrs = []$/;"	v
+escapedName	coffee/node_modules/commander/package.json	/^        "escapedName": "commander",$/;"	f
+escapedName	coffee/node_modules/commander/package.json	/^    "escapedName": "commander",$/;"	f
+escapedName	coffee/node_modules/graceful-readlink/package.json	/^        "escapedName": "graceful-readlink",$/;"	f
+escapedName	coffee/node_modules/graceful-readlink/package.json	/^    "escapedName": "graceful-readlink",$/;"	f
+exists	coffee/node_modules/commander/index.js	/^function exists(file) {$/;"	f
+exports.readlinkSync	coffee/node_modules/graceful-readlink/index.js	/^  , lstat = fs.lstatSync;$/;"	f
+files	coffee/node_modules/commander/package.json	/^  "files": [$/;"	f
+fixKey	coffee/formatter.coffee	/^fixKey = (rebuildArr) ->$/;"	f
+fixKey	coffee/mover.coffee	/^fixKey = (rebuildArr) ->$/;"	f
+fs	coffee/formatter.coffee	/^fs = require "fs"$/;"	v
+fs	coffee/mover.coffee	/^fs = require "fs"$/;"	v
+fs	coffee/node_modules/commander/index.js	/^var fs = require('fs');$/;"	v
+fs	coffee/node_modules/graceful-readlink/index.js	/^var fs = require('fs')$/;"	v
+gitHead	coffee/node_modules/commander/package.json	/^  "gitHead": "b2aad7a8471d434593a85306aa73777a526e9f75",$/;"	f
+gitHead	coffee/node_modules/graceful-readlink/package.json	/^  "gitHead": "f6655275bebef706fb63fd01b5f062a7052419a5",$/;"	f
+graceful-readlink	coffee/node_modules/commander/package.json	/^    "graceful-readlink": ">= 1.0.0"$/;"	f
+handleFile	coffee/formatter.coffee	/^handleFile = (fileStream) ->$/;"	f
+handleFile	coffee/mover.coffee	/^handleFile = (fileStream) ->$/;"	f
+homepage	coffee/node_modules/commander/package.json	/^  "homepage": "https:\/\/github.com\/tj\/commander.js#readme",$/;"	f
+homepage	coffee/node_modules/graceful-readlink/package.json	/^  "homepage": "https:\/\/github.com\/zhiyelee\/graceful-readlink",$/;"	f
+humanReadableArgName	coffee/node_modules/commander/index.js	/^function humanReadableArgName(arg) {$/;"	f
+i	coffee/formatter.coffee	/^					i = 0$/;"	v
+i	coffee/formatter.coffee	/^	i = 0$/;"	v
+i	coffee/mover.coffee	/^	i = 0$/;"	v
+input	coffee/formatter.coffee	/^		input: fileStream$/;"	f
+input	coffee/mover.coffee	/^		input: fileStream$/;"	f
+j	coffee/formatter.coffee	/^				j = 0$/;"	v
+j	coffee/formatter.coffee	/^			j = 0$/;"	v
+keyCheck	coffee/formatter.coffee	/^keyCheck = (lineNum, keyArr) ->$/;"	f
+keySeq	coffee/formatter.coffee	/^keySeq = ['(1)', '(#1)', '(2)', '(#2)', '(3)', '(4)', '(#4)', '(5)', '(#5)', '(6)', '(#6)', '(7)',$/;"	v
+keySeq	coffee/mover.coffee	/^keySeq = ['(1)', '(#1)', '(2)', '(#2)', '(3)', '(4)', '(#4)', '(5)', '(#5)', '(6)', '(#6)', '(7)',$/;"	v
+keySplit	coffee/formatter.coffee	/^keySplit = (line) ->$/;"	f
+keySplit	coffee/mover.coffee	/^keySplit = (line) ->$/;"	f
+keywords	coffee/node_modules/commander/package.json	/^  "keywords": [$/;"	f
+keywords	coffee/node_modules/graceful-readlink/package.json	/^  "keywords": [$/;"	f
+license	coffee/node_modules/commander/package.json	/^  "license": "MIT",$/;"	f
+license	coffee/node_modules/graceful-readlink/package.json	/^  "license": "MIT",$/;"	f
+lineNum	coffee/formatter.coffee	/^	lineNum = 0$/;"	v
+lineNum	coffee/mover.coffee	/^	lineNum = 0$/;"	v
+main	coffee/node_modules/commander/package.json	/^  "main": "index",$/;"	f
+main	coffee/node_modules/graceful-readlink/package.json	/^  "main": "index.js",$/;"	f
+maintainers	coffee/node_modules/commander/package.json	/^  "maintainers": [$/;"	f
+maintainers	coffee/node_modules/graceful-readlink/package.json	/^  "maintainers": [$/;"	f
+name	coffee/node_modules/commander/package.json	/^        "name": "commander",$/;"	f
+name	coffee/node_modules/commander/package.json	/^      "name": "somekittens",$/;"	f
+name	coffee/node_modules/commander/package.json	/^      "name": "tjholowaychuk",$/;"	f
+name	coffee/node_modules/commander/package.json	/^      "name": "zhiyelee",$/;"	f
+name	coffee/node_modules/commander/package.json	/^    "name": "TJ Holowaychuk",$/;"	f
+name	coffee/node_modules/commander/package.json	/^    "name": "commander",$/;"	f
+name	coffee/node_modules/commander/package.json	/^    "name": "zhiyelee",$/;"	f
+name	coffee/node_modules/commander/package.json	/^  "name": "commander",$/;"	f
+name	coffee/node_modules/graceful-readlink/package.json	/^        "name": "graceful-readlink",$/;"	f
+name	coffee/node_modules/graceful-readlink/package.json	/^      "name": "zhiyelee",$/;"	f
+name	coffee/node_modules/graceful-readlink/package.json	/^    "name": "graceful-readlink",$/;"	f
+name	coffee/node_modules/graceful-readlink/package.json	/^    "name": "zhiyelee"$/;"	f
+name	coffee/node_modules/graceful-readlink/package.json	/^    "name": "zhiyelee",$/;"	f
+name	coffee/node_modules/graceful-readlink/package.json	/^  "name": "graceful-readlink",$/;"	f
+noattachment	coffee/node_modules/commander/package.json	/^    "noattachment": false,$/;"	f
+noattachment	coffee/node_modules/graceful-readlink/package.json	/^    "noattachment": false,$/;"	f
+node	coffee/node_modules/commander/package.json	/^    "node": ">= 0.6.x"$/;"	f
+optionalDependencies	coffee/node_modules/commander/package.json	/^  "optionalDependencies": {},$/;"	f
+optionalDependencies	coffee/node_modules/graceful-readlink/package.json	/^  "optionalDependencies": {},$/;"	f
+output	coffee/formatter.coffee	/^					output = "Error: "$/;"	v
+output	coffee/formatter.coffee	/^		output: process.stdout$/;"	f
+output	coffee/mover.coffee	/^		output: process.stdout$/;"	f
+outputHelpIfNecessary	coffee/node_modules/commander/index.js	/^function outputHelpIfNecessary(cmd, options) {$/;"	f
+pad	coffee/node_modules/commander/index.js	/^function pad(str, width) {$/;"	f
+parenCheck	coffee/formatter.coffee	/^parenCheck = (lineNum, parenArr) ->$/;"	f
+parenSplit	coffee/formatter.coffee	/^parenSplit = (keyArr) ->$/;"	f
+path	coffee/node_modules/commander/index.js	/^var path = require('path');$/;"	v
+printMovedKey	coffee/mover.coffee	/^printMovedKey = (fixedArr, moveStep) ->$/;"	f
+publish_time	coffee/node_modules/commander/package.json	/^  "publish_time": 1444749985933,$/;"	f
+publish_time	coffee/node_modules/graceful-readlink/package.json	/^  "publish_time": 1423714736538,$/;"	f
+raw	coffee/node_modules/commander/package.json	/^        "raw": "commander",$/;"	f
+raw	coffee/node_modules/commander/package.json	/^    "raw": "commander",$/;"	f
+raw	coffee/node_modules/graceful-readlink/package.json	/^        "raw": "graceful-readlink@>= 1.0.0",$/;"	f
+raw	coffee/node_modules/graceful-readlink/package.json	/^    "raw": "graceful-readlink@>= 1.0.0",$/;"	f
+rawSpec	coffee/node_modules/commander/package.json	/^        "rawSpec": "",$/;"	f
+rawSpec	coffee/node_modules/commander/package.json	/^    "rawSpec": "",$/;"	f
+rawSpec	coffee/node_modules/graceful-readlink/package.json	/^        "rawSpec": ">= 1.0.0",$/;"	f
+rawSpec	coffee/node_modules/graceful-readlink/package.json	/^    "rawSpec": ">= 1.0.0",$/;"	f
+readlink	coffee/node_modules/commander/index.js	/^var readlink = require('graceful-readlink').readlinkSync;$/;"	v
+readme	coffee/node_modules/commander/package.json	/^  "readme": "ERROR: No README data found!",$/;"	f
+readme	coffee/node_modules/graceful-readlink/package.json	/^  "readme": "ERROR: No README data found!",$/;"	f
+repository	coffee/node_modules/commander/package.json	/^  "repository": {$/;"	f
+repository	coffee/node_modules/graceful-readlink/package.json	/^  "repository": {$/;"	f
+root	pymusic.py	/^	root = Application()$/;"	v	class:Application
+scope	coffee/node_modules/commander/package.json	/^        "scope": null,$/;"	f
+scope	coffee/node_modules/commander/package.json	/^    "scope": null,$/;"	f
+scope	coffee/node_modules/graceful-readlink/package.json	/^        "scope": null,$/;"	f
+scope	coffee/node_modules/graceful-readlink/package.json	/^    "scope": null,$/;"	f
+scoreRebuild	coffee/formatter.coffee	/^scoreRebuild = (keyArr) ->$/;"	f
+scoreRebuild	coffee/mover.coffee	/^scoreRebuild = (keyArr) ->$/;"	f
+scripts	coffee/node_modules/commander/package.json	/^  "scripts": {$/;"	f
+scripts	coffee/node_modules/graceful-readlink/package.json	/^  "scripts": {$/;"	f
+shasum	coffee/node_modules/commander/package.json	/^    "shasum": "9c99094176e12240cb22d6c5146098400fe0f7d4",$/;"	f
+shasum	coffee/node_modules/graceful-readlink/package.json	/^    "shasum": "4cafad76bc62f02fa039b2f94e9a3dd3a391a725",$/;"	f
+should	coffee/node_modules/commander/package.json	/^    "should": ">= 0.0.1",$/;"	f
+sinon	coffee/node_modules/commander/package.json	/^    "sinon": ">=1.17.1"$/;"	f
+size	coffee/node_modules/commander/package.json	/^    "size": 13425,$/;"	f
+size	coffee/node_modules/graceful-readlink/package.json	/^    "size": 1531,$/;"	f
+spawn	coffee/node_modules/commander/index.js	/^var spawn = require('child_process').spawn;$/;"	v
+spec	coffee/node_modules/commander/package.json	/^        "spec": "latest",$/;"	f
+spec	coffee/node_modules/commander/package.json	/^    "spec": "latest",$/;"	f
+spec	coffee/node_modules/graceful-readlink/package.json	/^        "spec": ">=1.0.0",$/;"	f
+spec	coffee/node_modules/graceful-readlink/package.json	/^    "spec": ">=1.0.0",$/;"	f
+tarball	coffee/node_modules/commander/package.json	/^    "tarball": "http:\/\/registry.npm.taobao.org\/commander\/download\/commander-2.9.0.tgz"$/;"	f
+tarball	coffee/node_modules/graceful-readlink/package.json	/^    "tarball": "http:\/\/registry.npm.taobao.org\/graceful-readlink\/download\/graceful-readlink-1.0.1.tgz"$/;"	f
+tempArr	coffee/formatter.coffee	/^					tempArr = []$/;"	v
+terminal	coffee/formatter.coffee	/^		terminal: false$/;"	f
+terminal	coffee/mover.coffee	/^		terminal: false$/;"	f
+test	coffee/node_modules/commander/package.json	/^    "test": "make test"$/;"	f
+test	coffee/node_modules/graceful-readlink/package.json	/^    "test": "echo \\"Error: no test specified\\" && exit 1"$/;"	f
+testArr	coffee/formatter.coffee	/^			testArr = arr$/;"	v
+type	coffee/node_modules/commander/package.json	/^        "type": "tag"$/;"	f
+type	coffee/node_modules/commander/package.json	/^    "type": "git",$/;"	f
+type	coffee/node_modules/commander/package.json	/^    "type": "tag"$/;"	f
+type	coffee/node_modules/graceful-readlink/package.json	/^        "type": "range"$/;"	f
+type	coffee/node_modules/graceful-readlink/package.json	/^    "type": "git",$/;"	f
+type	coffee/node_modules/graceful-readlink/package.json	/^    "type": "range"$/;"	f
+url	coffee/node_modules/commander/package.json	/^    "url": "git+https:\/\/github.com\/tj\/commander.js.git"$/;"	f
+url	coffee/node_modules/commander/package.json	/^    "url": "https:\/\/github.com\/tj\/commander.js\/issues"$/;"	f
+url	coffee/node_modules/graceful-readlink/package.json	/^    "url": "git:\/\/github.com\/zhiyelee\/graceful-readlink.git"$/;"	f
+url	coffee/node_modules/graceful-readlink/package.json	/^    "url": "https:\/\/github.com\/zhiyelee\/graceful-readlink\/issues"$/;"	f
+valueSeq	coffee/mover.coffee	/^valueSeq = ['C', '#C', 'D', '#D', 'E', 'F', '#F', 'G', '#G', 'A', '#A', 'B']$/;"	v
+version	coffee/node_modules/commander/package.json	/^  "version": "2.9.0"$/;"	f
+version	coffee/node_modules/graceful-readlink/package.json	/^  "version": "1.0.1"$/;"	f

@@ -350,8 +350,8 @@ Command.prototype.action = function(fn) {
  *
  * @param {String} flags
  * @param {String} description
- * @param {Function|Mixed} fn or default
- * @param {Mixed} defaultValue
+ * @param {Function|*} [fn] or default
+ * @param {*} [defaultValue]
  * @return {Command} for chaining
  * @api public
  */
@@ -459,11 +459,24 @@ Command.prototype.parse = function(argv) {
 
   // executable sub-commands
   var name = result.args[0];
+
+  var aliasCommand = null;
+  // check alias of sub commands
+  if (name) {
+    aliasCommand = this.commands.filter(function(command) {
+      return command.alias() === name;
+    })[0];
+  }
+
   if (this._execs[name] && typeof this._execs[name] != "function") {
+    return this.executeSubCommand(argv, args, parsed.unknown);
+  } else if (aliasCommand) {
+    // is alias of a subCommand
+    args[0] = aliasCommand._name;
     return this.executeSubCommand(argv, args, parsed.unknown);
   } else if (this.defaultExecutable) {
     // use the default subcommand
-    args.unshift(name = this.defaultExecutable);
+    args.unshift(this.defaultExecutable);
     return this.executeSubCommand(argv, args, parsed.unknown);
   }
 
@@ -525,7 +538,7 @@ Command.prototype.executeSubCommand = function(argv, args, unknown) {
   var proc;
   if (process.platform !== 'win32') {
     if (isExplicitJS) {
-      args.unshift(localBin);
+      args.unshift(bin);
       // add executable arguments to spawn
       args = (process.execArgv || []).concat(args);
 
@@ -534,7 +547,7 @@ Command.prototype.executeSubCommand = function(argv, args, unknown) {
       proc = spawn(bin, args, { stdio: 'inherit', customFds: [0, 1, 2] });
     }
   } else {
-    args.unshift(localBin);
+    args.unshift(bin);
     proc = spawn(process.execPath, args, { stdio: 'inherit'});
   }
 
@@ -668,13 +681,13 @@ Command.prototype.parseOptions = function(argv) {
     arg = argv[i];
 
     // literal args after --
-    if ('--' == arg) {
-      literal = true;
+    if (literal) {
+      args.push(arg);
       continue;
     }
 
-    if (literal) {
-      args.push(arg);
+    if ('--' == arg) {
+      literal = true;
       continue;
     }
 
@@ -810,7 +823,7 @@ Command.prototype.variadicArgNotLast = function(name) {
  * which will print the version number when passed.
  *
  * @param {String} str
- * @param {String} flags
+ * @param {String} [flags]
  * @return {Command} for chaining
  * @api public
  */
@@ -850,8 +863,14 @@ Command.prototype.description = function(str) {
  */
 
 Command.prototype.alias = function(alias) {
-  if (0 == arguments.length) return this._alias;
-  this._alias = alias;
+  var command = this;
+  if(this.commands.length !== 0) {
+    command = this.commands[this.commands.length - 1]
+  }
+
+  if (arguments.length === 0) return command._alias;
+
+  command._alias = alias;
   return this;
 };
 
@@ -943,7 +962,7 @@ Command.prototype.commandHelp = function() {
         + (cmd._alias ? '|' + cmd._alias : '')
         + (cmd.options.length ? ' [options]' : '')
         + ' ' + args
-      , cmd.description()
+      , cmd._description
     ];
   });
 
