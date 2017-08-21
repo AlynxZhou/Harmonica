@@ -1,0 +1,287 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+#1	digits-notes.json	/^  "#1": "Db4",$/;"	f
+#2	digits-notes.json	/^  "#2": "Eb4",$/;"	f
+#4	digits-notes.json	/^  "#4": "Gb4",$/;"	f
+#5	digits-notes.json	/^  "#5": "Ab4",$/;"	f
+#6	digits-notes.json	/^  "#6": "Bb4",$/;"	f
+(#1)	digits-notes.json	/^  "(#1)": "Db3",$/;"	f
+(#2)	digits-notes.json	/^  "(#2)": "Eb3",$/;"	f
+(#4)	digits-notes.json	/^  "(#4)": "Gb3",$/;"	f
+(#5)	digits-notes.json	/^  "(#5)": "Ab3",$/;"	f
+(#6)	digits-notes.json	/^  "(#6)": "Bb3",$/;"	f
+(1)	digits-notes.json	/^  "(1)": "C3",$/;"	f
+(2)	digits-notes.json	/^  "(2)": "D3",$/;"	f
+(3)	digits-notes.json	/^  "(3)": "E3",$/;"	f
+(4)	digits-notes.json	/^  "(4)": "F3",$/;"	f
+(5)	digits-notes.json	/^  "(5)": "G3",$/;"	f
+(6)	digits-notes.json	/^  "(6)": "A3",$/;"	f
+(7)	digits-notes.json	/^  "(7)": "B3",$/;"	f
+1	digits-notes.json	/^  "1": "C4",$/;"	f
+2	digits-notes.json	/^  "2": "D4",$/;"	f
+3	digits-notes.json	/^  "3": "E4",$/;"	f
+4	digits-notes.json	/^  "4": "F4",$/;"	f
+5	digits-notes.json	/^  "5": "G4",$/;"	f
+6	digits-notes.json	/^  "6": "A4",$/;"	f
+7	digits-notes.json	/^  "7": "B4",$/;"	f
+Command	node_modules/commander/index.js	/^function Command(name) {$/;"	c
+Command.__proto__	node_modules/commander/index.js	/^Command.prototype.__proto__ = EventEmitter.prototype;$/;"	m
+Command.action	node_modules/commander/index.js	/^Command.prototype.action = function(fn) {$/;"	m
+Command.addImplicitHelpCommand	node_modules/commander/index.js	/^Command.prototype.addImplicitHelpCommand = function() {$/;"	m
+Command.alias	node_modules/commander/index.js	/^Command.prototype.alias = function(alias) {$/;"	m
+Command.allowUnknownOption	node_modules/commander/index.js	/^Command.prototype.allowUnknownOption = function(arg) {$/;"	m
+Command.arguments	node_modules/commander/index.js	/^Command.prototype.arguments = function (desc) {$/;"	m
+Command.cb	node_modules/commander/index.js	/^  if (!cb) {$/;"	f
+Command.command	node_modules/commander/index.js	/^Command.prototype.command = function(name, desc, opts) {$/;"	m
+Command.commandHelp	node_modules/commander/index.js	/^Command.prototype.commandHelp = function() {$/;"	m
+Command.description	node_modules/commander/index.js	/^Command.prototype.description = function(str) {$/;"	m
+Command.executeSubCommand	node_modules/commander/index.js	/^Command.prototype.executeSubCommand = function(argv, args, unknown) {$/;"	m
+Command.fn	node_modules/commander/index.js	/^      var regex = fn;$/;"	f
+Command.help	node_modules/commander/index.js	/^Command.prototype.help = function(cb) {$/;"	m
+Command.helpInformation	node_modules/commander/index.js	/^Command.prototype.helpInformation = function() {$/;"	m
+Command.largestOptionLength	node_modules/commander/index.js	/^Command.prototype.largestOptionLength = function() {$/;"	m
+Command.missingArgument	node_modules/commander/index.js	/^Command.prototype.missingArgument = function(name) {$/;"	m
+Command.name	node_modules/commander/index.js	/^Command.prototype.name = function() {$/;"	m
+Command.option	node_modules/commander/index.js	/^Command.prototype.option = function(flags, description, fn, defaultValue) {$/;"	m
+Command.optionFor	node_modules/commander/index.js	/^Command.prototype.optionFor = function(arg) {$/;"	m
+Command.optionHelp	node_modules/commander/index.js	/^Command.prototype.optionHelp = function() {$/;"	m
+Command.optionMissingArgument	node_modules/commander/index.js	/^Command.prototype.optionMissingArgument = function(option, flag) {$/;"	m
+Command.opts	node_modules/commander/index.js	/^Command.prototype.opts = function() {$/;"	m
+Command.outputHelp	node_modules/commander/index.js	/^Command.prototype.outputHelp = function(cb) {$/;"	m
+Command.parse	node_modules/commander/index.js	/^Command.prototype.parse = function(argv) {$/;"	m
+Command.parseArgs	node_modules/commander/index.js	/^Command.prototype.parseArgs = function(args, unknown) {$/;"	m
+Command.parseExpectedArgs	node_modules/commander/index.js	/^Command.prototype.parseExpectedArgs = function(args) {$/;"	m
+Command.parseOptions	node_modules/commander/index.js	/^Command.prototype.parseOptions = function(argv) {$/;"	m
+Command.unknownOption	node_modules/commander/index.js	/^Command.prototype.unknownOption = function(flag) {$/;"	m
+Command.var.listener	node_modules/commander/index.js	/^  var listener = function(args, unknown) {$/;"	f
+Command.variadicArgNotLast	node_modules/commander/index.js	/^Command.prototype.variadicArgNotLast = function(name) {$/;"	m
+Command.version	node_modules/commander/index.js	/^Command.prototype.version = function(str, flags) {$/;"	m
+Converter	converter.coffee	/^class Converter$/;"	c
+EventEmitter	node_modules/commander/index.js	/^var EventEmitter = require('events').EventEmitter;$/;"	v
+MULTI_COMMENT	converter.coffee	/^MULTI_COMMENT = 2$/;"	v
+NOT_COMMENT	converter.coffee	/^NOT_COMMENT = 0$/;"	v
+Option	node_modules/commander/index.js	/^function Option(flags, description) {$/;"	c
+Option.is	node_modules/commander/index.js	/^Option.prototype.is = function(arg) {$/;"	m
+Option.name	node_modules/commander/index.js	/^Option.prototype.name = function() {$/;"	m
+SINGLE_COMMENT	converter.coffee	/^SINGLE_COMMENT = 1$/;"	v
+[#1]	digits-notes.json	/^  "[#1]": "Db5",$/;"	f
+[#2]	digits-notes.json	/^  "[#2]": "Eb5",$/;"	f
+[#4]	digits-notes.json	/^  "[#4]": "Gb5",$/;"	f
+[#5]	digits-notes.json	/^  "[#5]": "Ab5",$/;"	f
+[#6]	digits-notes.json	/^  "[#6]": "Bb5",$/;"	f
+[1]	digits-notes.json	/^  "[1]": "C5",$/;"	f
+[2]	digits-notes.json	/^  "[2]": "D5",$/;"	f
+[3]	digits-notes.json	/^  "[3]": "E5",$/;"	f
+[4]	digits-notes.json	/^  "[4]": "F5",$/;"	f
+[5]	digits-notes.json	/^  "[5]": "G5",$/;"	f
+[6]	digits-notes.json	/^  "[6]": "A5",$/;"	f
+[7]	digits-notes.json	/^  "[7]": "B5",$/;"	f
+_args	node_modules/commander/package.json	/^  "_args": [$/;"	f
+_args	node_modules/graceful-readlink/package.json	/^  "_args": [$/;"	f
+_from	node_modules/commander/package.json	/^  "_from": "commander@latest",$/;"	f
+_from	node_modules/graceful-readlink/package.json	/^  "_from": "graceful-readlink@>=1.0.0",$/;"	f
+_id	node_modules/commander/package.json	/^  "_id": "commander@2.10.0",$/;"	f
+_id	node_modules/graceful-readlink/package.json	/^  "_id": "graceful-readlink@1.0.1",$/;"	f
+_inCache	node_modules/commander/package.json	/^  "_inCache": true,$/;"	f
+_inCache	node_modules/graceful-readlink/package.json	/^  "_inCache": true,$/;"	f
+_location	node_modules/commander/package.json	/^  "_location": "\/commander",$/;"	f
+_location	node_modules/graceful-readlink/package.json	/^  "_location": "\/graceful-readlink",$/;"	f
+_nodeVersion	node_modules/commander/package.json	/^  "_nodeVersion": "6.10.1",$/;"	f
+_nodeVersion	node_modules/graceful-readlink/package.json	/^  "_nodeVersion": "0.11.14",$/;"	f
+_npmOperationalInternal	node_modules/commander/package.json	/^  "_npmOperationalInternal": {$/;"	f
+_npmUser	node_modules/commander/package.json	/^  "_npmUser": {$/;"	f
+_npmUser	node_modules/graceful-readlink/package.json	/^  "_npmUser": {$/;"	f
+_npmVersion	node_modules/commander/package.json	/^  "_npmVersion": "5.0.3",$/;"	f
+_npmVersion	node_modules/graceful-readlink/package.json	/^  "_npmVersion": "2.1.17",$/;"	f
+_phantomChildren	node_modules/commander/package.json	/^  "_phantomChildren": {},$/;"	f
+_phantomChildren	node_modules/graceful-readlink/package.json	/^  "_phantomChildren": {},$/;"	f
+_requested	node_modules/commander/package.json	/^  "_requested": {$/;"	f
+_requested	node_modules/graceful-readlink/package.json	/^  "_requested": {$/;"	f
+_requiredBy	node_modules/commander/package.json	/^  "_requiredBy": [$/;"	f
+_requiredBy	node_modules/graceful-readlink/package.json	/^  "_requiredBy": [$/;"	f
+_resolved	node_modules/commander/package.json	/^  "_resolved": "https:\/\/registry.npmjs.org\/commander\/-\/commander-2.10.0.tgz",$/;"	f
+_resolved	node_modules/graceful-readlink/package.json	/^  "_resolved": "https:\/\/registry.npmjs.org\/graceful-readlink\/-\/graceful-readlink-1.0.1.tgz",$/;"	f
+_shasum	node_modules/commander/package.json	/^  "_shasum": "e1f5d3245de246d1a5ca04702fa1ad1bd7e405fe",$/;"	f
+_shasum	node_modules/graceful-readlink/package.json	/^  "_shasum": "4cafad76bc62f02fa039b2f94e9a3dd3a391a725",$/;"	f
+_shrinkwrap	node_modules/commander/package.json	/^  "_shrinkwrap": null,$/;"	f
+_shrinkwrap	node_modules/graceful-readlink/package.json	/^  "_shrinkwrap": null,$/;"	f
+_spec	node_modules/commander/package.json	/^  "_spec": "commander",$/;"	f
+_spec	node_modules/graceful-readlink/package.json	/^  "_spec": "graceful-readlink@>= 1.0.0",$/;"	f
+_where	node_modules/commander/package.json	/^  "_where": "\/home\/alynx\/Projects\/coffee-music",$/;"	f
+_where	node_modules/graceful-readlink/package.json	/^  "_where": "\/home\/alynx\/Projects\/coffee-music\/node_modules\/commander",$/;"	f
+author	node_modules/commander/package.json	/^  "author": {$/;"	f
+author	node_modules/graceful-readlink/package.json	/^  "author": {$/;"	f
+basename	node_modules/commander/index.js	/^var basename = path.basename;$/;"	v
+bracketObject	converter.coffee	/^    @bracketObject =$/;"	f
+bracketStatus	converter.coffee	/^        @bracketStatus = ''$/;"	f
+bracketStatus	converter.coffee	/^    @bracketStatus = ''$/;"	f
+bugs	node_modules/commander/package.json	/^  "bugs": {$/;"	f
+bugs	node_modules/graceful-readlink/package.json	/^  "bugs": {$/;"	f
+buildJSON	converter.coffee	/^  buildJSON: () =>$/;"	m
+buildLine	converter.coffee	/^  buildLine: () =>$/;"	m
+checkBlank	converter.coffee	/^  checkBlank: (chordArray) =>$/;"	m
+chordArray	converter.coffee	/^              @chordArray = []$/;"	f
+chordArray	converter.coffee	/^        @chordArray = []$/;"	f
+chordArray	converter.coffee	/^      chordArray = []$/;"	v
+chordArray	converter.coffee	/^    @chordArray = []$/;"	f
+chordStatus	converter.coffee	/^        @chordStatus = false$/;"	f
+chordStatus	converter.coffee	/^        @chordStatus = true$/;"	f
+chordStatus	converter.coffee	/^    @chordStatus = false$/;"	f
+commander.from	converter.coffee	/^    commander.from = 'C'$/;"	v
+commander.to	converter.coffee	/^    commander.to = 'C'$/;"	v
+commentStatus	converter.coffee	/^            @commentStatus = NOT_COMMENT$/;"	f
+commentStatus	converter.coffee	/^        @commentStatus = MULTI_COMMENT$/;"	f
+commentStatus	converter.coffee	/^        @commentStatus = SINGLE_COMMENT$/;"	f
+commentStatus	converter.coffee	/^    @commentStatus = NOT_COMMENT$/;"	f
+console	converter.coffee	/^  console: () =>$/;"	m
+constructor	converter.coffee	/^  constructor: () ->$/;"	m
+convert	converter.coffee	/^  convert: () =>$/;"	m
+count	converter.coffee	/^    count = 0$/;"	v
+dependencies	node_modules/commander/package.json	/^  "dependencies": {$/;"	f
+dependencies	node_modules/graceful-readlink/package.json	/^  "dependencies": {},$/;"	f
+description	node_modules/commander/package.json	/^  "description": "the complete solution for node.js command-line programs",$/;"	f
+description	node_modules/graceful-readlink/package.json	/^  "description": "graceful fs.readlink",$/;"	f
+devDependencies	node_modules/commander/package.json	/^  "devDependencies": {$/;"	f
+devDependencies	node_modules/graceful-readlink/package.json	/^  "devDependencies": {},$/;"	f
+digits	converter.coffee	/^    @digits = ['1', '2', '3', '4', '5', '6', '7']$/;"	f
+digitsNotes	converter.coffee	/^    @digitsNotes = JSON.parse($/;"	f
+directories	node_modules/commander/package.json	/^  "directories": {},$/;"	f
+directories	node_modules/graceful-readlink/package.json	/^  "directories": {},$/;"	f
+dirname	node_modules/commander/index.js	/^var dirname = path.dirname;$/;"	v
+dist	node_modules/commander/package.json	/^  "dist": {$/;"	f
+dist	node_modules/graceful-readlink/package.json	/^  "dist": {$/;"	f
+email	node_modules/commander/package.json	/^      "email": "abe@enzou.tokyo"$/;"	f
+email	node_modules/commander/package.json	/^      "email": "rkoutnik@gmail.com"$/;"	f
+email	node_modules/commander/package.json	/^      "email": "romain.vanesyan@gmail.com"$/;"	f
+email	node_modules/commander/package.json	/^      "email": "tj@vision-media.ca"$/;"	f
+email	node_modules/commander/package.json	/^      "email": "zhiyelee@gmail.com"$/;"	f
+email	node_modules/commander/package.json	/^    "email": "abe@enzou.tokyo"$/;"	f
+email	node_modules/commander/package.json	/^    "email": "tj@vision-media.ca"$/;"	f
+email	node_modules/graceful-readlink/package.json	/^      "email": "zhiyelee@gmail.com"$/;"	f
+email	node_modules/graceful-readlink/package.json	/^    "email": "zhiyelee@gmail.com"$/;"	f
+engines	node_modules/commander/package.json	/^  "engines": {$/;"	f
+escapedName	node_modules/commander/package.json	/^        "escapedName": "commander",$/;"	f
+escapedName	node_modules/commander/package.json	/^    "escapedName": "commander",$/;"	f
+escapedName	node_modules/graceful-readlink/package.json	/^        "escapedName": "graceful-readlink",$/;"	f
+escapedName	node_modules/graceful-readlink/package.json	/^    "escapedName": "graceful-readlink",$/;"	f
+exports.readlinkSync	node_modules/graceful-readlink/index.js	/^  , lstat = fs.lstatSync;$/;"	f
+files	node_modules/commander/package.json	/^  "files": [$/;"	f
+finalJSON	converter.coffee	/^    @finalJSON = []$/;"	f
+fixKey	converter.coffee	/^  fixKey: () =>$/;"	m
+fs	converter.coffee	/^fs = require("fs")$/;"	v
+fs	node_modules/commander/index.js	/^var fs = require('fs');$/;"	v
+fs	node_modules/graceful-readlink/index.js	/^var fs = require('fs')$/;"	v
+function.camelcase	node_modules/commander/index.js	/^function camelcase(flag) {$/;"	f
+function.exists	node_modules/commander/index.js	/^function exists(file) {$/;"	f
+function.humanReadableArgName	node_modules/commander/index.js	/^function humanReadableArgName(arg) {$/;"	f
+function.outputHelpIfNecessary	node_modules/commander/index.js	/^function outputHelpIfNecessary(cmd, options) {$/;"	f
+function.pad	node_modules/commander/index.js	/^function pad(str, width) {$/;"	f
+gitHead	node_modules/commander/package.json	/^  "gitHead": "8870675aa189d84014779b53760544a0e614cb40",$/;"	f
+gitHead	node_modules/graceful-readlink/package.json	/^  "gitHead": "f6655275bebef706fb63fd01b5f062a7052419a5",$/;"	f
+graceful-readlink	node_modules/commander/package.json	/^    "graceful-readlink": ">= 1.0.0"$/;"	f
+homepage	node_modules/commander/package.json	/^  "homepage": "https:\/\/github.com\/tj\/commander.js#readme",$/;"	f
+homepage	node_modules/graceful-readlink/package.json	/^  "homepage": "https:\/\/github.com\/zhiyelee\/graceful-readlink",$/;"	f
+host	node_modules/commander/package.json	/^    "host": "s3:\/\/npm-registry-packages",$/;"	f
+i	converter.coffee	/^    i = 0$/;"	v
+integrity	node_modules/commander/package.json	/^    "integrity": "sha512-q\/r9trjmuikWDRJNTBHAVnWhuU6w+z80KgBq7j9YDclik5E7X4xi0KnlZBNFA1zOQ+SH\/vHMWd2mC9QTOz7GpA==",$/;"	f
+keySeq	converter.coffee	/^    @keySeq = ['(1)', '(#1)', '(2)', '(#2)', '(3)', '(4)',$/;"	f
+keywords	node_modules/commander/package.json	/^  "keywords": [$/;"	f
+keywords	node_modules/graceful-readlink/package.json	/^  "keywords": [$/;"	f
+license	node_modules/commander/package.json	/^  "license": "MIT",$/;"	f
+license	node_modules/graceful-readlink/package.json	/^  "license": "MIT",$/;"	f
+line	converter.coffee	/^    @line = ''$/;"	f
+lineNum	converter.coffee	/^    @lineNum = 0$/;"	f
+main	node_modules/commander/package.json	/^  "main": "index",$/;"	f
+main	node_modules/graceful-readlink/package.json	/^  "main": "index.js",$/;"	f
+maintainers	node_modules/commander/package.json	/^  "maintainers": [$/;"	f
+maintainers	node_modules/graceful-readlink/package.json	/^  "maintainers": [$/;"	f
+moveKey	converter.coffee	/^  moveKey: (moveStep) =>$/;"	m
+name	node_modules/commander/package.json	/^        "name": "commander",$/;"	f
+name	node_modules/commander/package.json	/^      "name": "abetomo",$/;"	f
+name	node_modules/commander/package.json	/^      "name": "somekittens",$/;"	f
+name	node_modules/commander/package.json	/^      "name": "tjholowaychuk",$/;"	f
+name	node_modules/commander/package.json	/^      "name": "vanesyan",$/;"	f
+name	node_modules/commander/package.json	/^      "name": "zhiyelee",$/;"	f
+name	node_modules/commander/package.json	/^    "name": "TJ Holowaychuk",$/;"	f
+name	node_modules/commander/package.json	/^    "name": "abetomo",$/;"	f
+name	node_modules/commander/package.json	/^    "name": "commander",$/;"	f
+name	node_modules/commander/package.json	/^  "name": "commander",$/;"	f
+name	node_modules/graceful-readlink/package.json	/^        "name": "graceful-readlink",$/;"	f
+name	node_modules/graceful-readlink/package.json	/^      "name": "zhiyelee",$/;"	f
+name	node_modules/graceful-readlink/package.json	/^    "name": "graceful-readlink",$/;"	f
+name	node_modules/graceful-readlink/package.json	/^    "name": "zhiyelee"$/;"	f
+name	node_modules/graceful-readlink/package.json	/^    "name": "zhiyelee",$/;"	f
+name	node_modules/graceful-readlink/package.json	/^  "name": "graceful-readlink",$/;"	f
+node	node_modules/commander/package.json	/^    "node": ">= 0.6.x"$/;"	f
+noteArray	converter.coffee	/^          @noteArray = []$/;"	f
+noteArray	converter.coffee	/^    @noteArray = []$/;"	f
+optionalDependencies	node_modules/commander/package.json	/^  "optionalDependencies": {},$/;"	f
+optionalDependencies	node_modules/graceful-readlink/package.json	/^  "optionalDependencies": {},$/;"	f
+output	converter.coffee	/^      output: process.stdout$/;"	f
+path	converter.coffee	/^path = require("path")$/;"	v
+path	node_modules/commander/index.js	/^var path = require('path');$/;"	v
+raw	node_modules/commander/package.json	/^        "raw": "commander",$/;"	f
+raw	node_modules/commander/package.json	/^    "raw": "commander",$/;"	f
+raw	node_modules/graceful-readlink/package.json	/^        "raw": "graceful-readlink@>= 1.0.0",$/;"	f
+raw	node_modules/graceful-readlink/package.json	/^    "raw": "graceful-readlink@>= 1.0.0",$/;"	f
+rawSpec	node_modules/commander/package.json	/^        "rawSpec": "",$/;"	f
+rawSpec	node_modules/commander/package.json	/^    "rawSpec": "",$/;"	f
+rawSpec	node_modules/graceful-readlink/package.json	/^        "rawSpec": ">= 1.0.0",$/;"	f
+rawSpec	node_modules/graceful-readlink/package.json	/^    "rawSpec": ">= 1.0.0",$/;"	f
+readlink	node_modules/commander/index.js	/^var readlink = require('graceful-readlink').readlinkSync;$/;"	v
+readme	node_modules/commander/package.json	/^  "readme": "# Commander.js\\n\\n\\n[![Build Status](https:\/\/api.travis-ci.org\/tj\/commander.js.svg?branch=master)](http:\/\/travis-ci.org\/tj\/commander.js)\\n[![NPM Version](http:\/\/img.shields.io\/npm\/v\/commander.svg?style=flat)](https:\/\/www.npmjs.org\/package\/commander)\\n[![NPM Downloads](https:\/\/img.shields.io\/npm\/dm\/commander.svg?style=flat)](https:\/\/www.npmjs.org\/package\/commander)\\n[![Join the chat at https:\/\/gitter.im\/tj\/commander.js](https:\/\/badges.gitter.im\/Join%20Chat.svg)](https:\/\/gitter.im\/tj\/commander.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\\n\\n  The complete solution for [node.js](http:\/\/nodejs.org) command-line interfaces, inspired by Ruby's [commander](https:\/\/github.com\/tj\/commander).  \\n  [API documentation](http:\/\/tj.github.com\/commander.js\/)\\n\\n\\n## Installation\\n\\n    $ npm install commander --save\\n\\n## Option parsing\\n\\n Options with commander are defined with the `.option()` method, also serving as documentation for the options. The example below parses args and options from `process.argv`, leaving remaining args as the `program.args` array which were not consumed by options.\\n\\n```js\\n#!\/usr\/bin\/env node\\n\\n\/**\\n * Module dependencies.\\n *\/\\n\\nvar program = require('commander');\\n\\nprogram\\n  .version('0.1.0')\\n  .option('-p, --peppers', 'Add peppers')\\n  .option('-P, --pineapple', 'Add pineapple')\\n  .option('-b, --bbq-sauce', 'Add bbq sauce')\\n  .option('-c, --cheese [type]', 'Add the specified type of cheese [marble]', 'marble')\\n  .parse(process.argv);\\n\\nconsole.log('you ordered a pizza with:');\\nif (program.peppers) console.log('  - peppers');\\nif (program.pineapple) console.log('  - pineapple');\\nif (program.bbqSauce) console.log('  - bbq');\\nconsole.log('  - %s cheese', program.cheese);\\n```\\n\\n Short flags may be passed as a single arg, for example `-abc` is equivalent to `-a -b -c`. Multi-word options such as \\"--template-engine\\" are camel-cased, becoming `program.templateEngine` etc.\\n\\n\\n## Coercion\\n\\n```js\\nfunction range(val) {\\n  return val.split('..').map(Number);\\n}\\n\\nfunction list(val) {\\n  return val.split(',');\\n}\\n\\nfunction collect(val, memo) {\\n  memo.push(val);\\n  return memo;\\n}\\n\\nfunction increaseVerbosity(v, total) {\\n  return total + 1;\\n}\\n\\nprogram\\n  .version('0.1.0')\\n  .usage('[options] <file ...>')\\n  .option('-i, --integer <n>', 'An integer argument', parseInt)\\n  .option('-f, --float <n>', 'A float argument', parseFloat)\\n  .option('-r, --range <a>..<b>', 'A range', range)\\n  .option('-l, --list <items>', 'A list', list)\\n  .option('-o, --optional [value]', 'An optional value')\\n  .option('-c, --collect [value]', 'A repeatable value', collect, [])\\n  .option('-v, --verbose', 'A value that can be increased', increaseVerbosity, 0)\\n  .parse(process.argv);\\n\\nconsole.log(' int: %j', program.integer);\\nconsole.log(' float: %j', program.float);\\nconsole.log(' optional: %j', program.optional);\\nprogram.range = program.range || [];\\nconsole.log(' range: %j..%j', program.range[0], program.range[1]);\\nconsole.log(' list: %j', program.list);\\nconsole.log(' collect: %j', program.collect);\\nconsole.log(' verbosity: %j', program.verbose);\\nconsole.log(' args: %j', program.args);\\n```\\n\\n## Regular Expression\\n```js\\nprogram\\n  .version('0.1.0')\\n  .option('-s --size <size>', 'Pizza size', \/^(large|medium|small)$\/i, 'medium')\\n  .option('-d --drink [drink]', 'Drink', \/^(coke|pepsi|izze)$\/i)\\n  .parse(process.argv);\\n  \\nconsole.log(' size: %j', program.size);\\nconsole.log(' drink: %j', program.drink);\\n```\\n\\n## Variadic arguments\\n\\n The last argument of a command can be variadic, and only the last argument.  To make an argument variadic you have to\\n append `...` to the argument name.  Here is an example:\\n\\n```js\\n#!\/usr\/bin\/env node\\n\\n\/**\\n * Module dependencies.\\n *\/\\n\\nvar program = require('commander');\\n\\nprogram\\n  .version('0.1.0')\\n  .command('rmdir <dir> [otherDirs...]')\\n  .action(function (dir, otherDirs) {\\n    console.log('rmdir %s', dir);\\n    if (otherDirs) {\\n      otherDirs.forEach(function (oDir) {\\n        console.log('rmdir %s', oDir);\\n      });\\n    }\\n  });\\n\\nprogram.parse(process.argv);\\n```\\n\\n An `Array` is used for the value of a variadic argument.  This applies to `program.args` as well as the argument passed\\n to your action as demonstrated above.\\n\\n## Specify the argument syntax\\n\\n```js\\n#!\/usr\/bin\/env node\\n\\nvar program = require('commander');\\n\\nprogram\\n  .version('0.1.0')\\n  .arguments('<cmd> [env]')\\n  .action(function (cmd, env) {\\n     cmdValue = cmd;\\n     envValue = env;\\n  });\\n\\nprogram.parse(process.argv);\\n\\nif (typeof cmdValue === 'undefined') {\\n   console.error('no command given!');\\n   process.exit(1);\\n}\\nconsole.log('command:', cmdValue);\\nconsole.log('environment:', envValue || \\"no environment given\\");\\n```\\nAngled brackets (e.g. `<cmd>`) indicate required input. Square brackets (e.g. `[env]`) indicate optional input.\\n\\n## Git-style sub-commands\\n\\n```js\\n\/\/ file: .\/examples\/pm\\nvar program = require('commander');\\n\\nprogram\\n  .version('0.1.0')\\n  .command('install [name]', 'install one or more packages')\\n  .command('search [query]', 'search with optional query')\\n  .command('list', 'list packages installed', {isDefault: true})\\n  .parse(process.argv);\\n```\\n\\nWhen `.command()` is invoked with a description argument, no `.action(callback)` should be called to handle sub-commands, otherwise there will be an error. This tells commander that you're going to use separate executables for sub-commands, much like `git(1)` and other popular tools.  \\nThe commander will try to search the executables in the directory of the entry script (like `.\/examples\/pm`) with the name `program-command`, like `pm-install`, `pm-search`.\\n\\nOptions can be passed with the call to `.command()`. Specifying `true` for `opts.noHelp` will remove the option from the generated help output. Specifying `true` for `opts.isDefault` will run the subcommand if no other subcommand is specified.\\n\\nIf the program is designed to be installed globally, make sure the executables have proper modes, like `755`.\\n\\n### `--harmony`\\n\\nYou can enable `--harmony` option in two ways:\\n* Use `#! \/usr\/bin\/env node --harmony` in the sub-commands scripts. Note some os version don’t support this pattern.\\n* Use the `--harmony` option when call the command, like `node --harmony examples\/pm publish`. The `--harmony` option will be preserved when spawning sub-command process.\\n\\n## Automated --help\\n\\n The help information is auto-generated based on the information commander already knows about your program, so the following `--help` info is for free:\\n\\n```  \\n $ .\/examples\/pizza --help\\n\\n   Usage: pizza [options]\\n\\n   An application for pizzas ordering\\n\\n   Options:\\n\\n     -h, --help           output usage information\\n     -V, --version        output the version number\\n     -p, --peppers        Add peppers\\n     -P, --pineapple      Add pineapple\\n     -b, --bbq            Add bbq sauce\\n     -c, --cheese <type>  Add the specified type of cheese [marble]\\n     -C, --no-cheese      You do not want any cheese\\n\\n```\\n\\n## Custom help\\n\\n You can display arbitrary `-h, --help` information\\n by listening for \\"--help\\". Commander will automatically\\n exit once you are done so that the remainder of your program\\n does not execute causing undesired behaviours, for example\\n in the following executable \\"stuff\\" will not output when\\n `--help` is used.\\n\\n```js\\n#!\/usr\/bin\/env node\\n\\n\/**\\n * Module dependencies.\\n *\/\\n\\nvar program = require('commander');\\n\\nprogram\\n  .version('0.1.0')\\n  .option('-f, --foo', 'enable some foo')\\n  .option('-b, --bar', 'enable some bar')\\n  .option('-B, --baz', 'enable some baz');\\n\\n\/\/ must be before .parse() since\\n\/\/ node's emit() is immediate\\n\\nprogram.on('--help', function(){\\n  console.log('  Examples:');\\n  console.log('');\\n  console.log('    $ custom-help --help');\\n  console.log('    $ custom-help -h');\\n  console.log('');\\n});\\n\\nprogram.parse(process.argv);\\n\\nconsole.log('stuff');\\n```\\n\\nYields the following help output when `node script-name.js -h` or `node script-name.js --help` are run:\\n\\n```\\n\\nUsage: custom-help [options]\\n\\nOptions:\\n\\n  -h, --help     output usage information\\n  -V, --version  output the version number\\n  -f, --foo      enable some foo\\n  -b, --bar      enable some bar\\n  -B, --baz      enable some baz\\n\\nExamples:\\n\\n  $ custom-help --help\\n  $ custom-help -h\\n\\n```\\n\\n## .outputHelp(cb)\\n\\nOutput help information without exiting.\\nOptional callback cb allows post-processing of help text before it is displayed.\\n\\nIf you want to display help by default (e.g. if no command was provided), you can use something like:\\n\\n```js\\nvar program = require('commander');\\nvar colors = require('colors');\\n\\nprogram\\n  .version('0.1.0')\\n  .command('getstream [url]', 'get stream URL')\\n  .parse(process.argv);\\n\\n  if (!process.argv.slice(2).length) {\\n    program.outputHelp(make_red);\\n  }\\n\\nfunction make_red(txt) {\\n  return colors.red(txt); \/\/display the help text in red on the console\\n}\\n```\\n\\n## .help(cb)\\n\\n  Output help information and exit immediately.\\n  Optional callback cb allows post-processing of help text before it is displayed.\\n\\n## Examples\\n\\n```js\\nvar program = require('commander');\\n\\nprogram\\n  .version('0.1.0')\\n  .option('-C, --chdir <path>', 'change the working directory')\\n  .option('-c, --config <path>', 'set config path. defaults to .\/deploy.conf')\\n  .option('-T, --no-tests', 'ignore test hook');\\n\\nprogram\\n  .command('setup [env]')\\n  .description('run setup commands for all envs')\\n  .option(\\"-s, --setup_mode [mode]\\", \\"Which setup mode to use\\")\\n  .action(function(env, options){\\n    var mode = options.setup_mode || \\"normal\\";\\n    env = env || 'all';\\n    console.log('setup for %s env(s) with %s mode', env, mode);\\n  });\\n\\nprogram\\n  .command('exec <cmd>')\\n  .alias('ex')\\n  .description('execute the given remote cmd')\\n  .option(\\"-e, --exec_mode <mode>\\", \\"Which exec mode to use\\")\\n  .action(function(cmd, options){\\n    console.log('exec \\"%s\\" using %s mode', cmd, options.exec_mode);\\n  }).on('--help', function() {\\n    console.log('  Examples:');\\n    console.log();\\n    console.log('    $ deploy exec sequential');\\n    console.log('    $ deploy exec async');\\n    console.log();\\n  });\\n\\nprogram\\n  .command('*')\\n  .action(function(env){\\n    console.log('deploying \\"%s\\"', env);\\n  });\\n\\nprogram.parse(process.argv);\\n```\\n\\nMore Demos can be found in the [examples](https:\/\/github.com\/tj\/commander.js\/tree\/master\/examples) directory.\\n\\n## License\\n\\nMIT\\n\\n",$/;"	f
+readme	node_modules/graceful-readlink/package.json	/^  "readme": "# graceful-readlink\\n[![NPM Version](http:\/\/img.shields.io\/npm\/v\/graceful-readlink.svg?style=flat)](https:\/\/www.npmjs.org\/package\/graceful-readlink)\\n[![NPM Downloads](https:\/\/img.shields.io\/npm\/dm\/graceful-readlink.svg?style=flat)](https:\/\/www.npmjs.org\/package\/graceful-readlink)\\n\\n\\n## Usage\\n\\n```js\\nvar readlinkSync = require('graceful-readlink').readlinkSync;\\nconsole.log(readlinkSync(f));\\n\/\/ output\\n\/\/  the file pointed to when `f` is a symbolic link\\n\/\/  the `f` itself when `f` is not a symbolic link\\n```\\n## Licence\\n\\nMIT License\\n",$/;"	f
+readmeFilename	node_modules/commander/package.json	/^  "readmeFilename": "Readme.md",$/;"	f
+readmeFilename	node_modules/graceful-readlink/package.json	/^  "readmeFilename": "README.md",$/;"	f
+rebuildLine	converter.coffee	/^    @rebuildLine = ''$/;"	f
+repository	node_modules/commander/package.json	/^  "repository": {$/;"	f
+repository	node_modules/graceful-readlink/package.json	/^  "repository": {$/;"	f
+scope	node_modules/commander/package.json	/^        "scope": null,$/;"	f
+scope	node_modules/commander/package.json	/^    "scope": null,$/;"	f
+scope	node_modules/graceful-readlink/package.json	/^        "scope": null,$/;"	f
+scope	node_modules/graceful-readlink/package.json	/^    "scope": null,$/;"	f
+scripts	node_modules/commander/package.json	/^  "scripts": {$/;"	f
+scripts	node_modules/graceful-readlink/package.json	/^  "scripts": {$/;"	f
+shasum	node_modules/commander/package.json	/^    "shasum": "e1f5d3245de246d1a5ca04702fa1ad1bd7e405fe",$/;"	f
+shasum	node_modules/graceful-readlink/package.json	/^    "shasum": "4cafad76bc62f02fa039b2f94e9a3dd3a391a725",$/;"	f
+should	node_modules/commander/package.json	/^    "should": ">= 0.0.1 <9.0.0",$/;"	f
+sinon	node_modules/commander/package.json	/^    "sinon": ">=1.17.1"$/;"	f
+spawn	node_modules/commander/index.js	/^var spawn = require('child_process').spawn;$/;"	v
+spec	node_modules/commander/package.json	/^        "spec": "latest",$/;"	f
+spec	node_modules/commander/package.json	/^    "spec": "latest",$/;"	f
+spec	node_modules/graceful-readlink/package.json	/^        "spec": ">=1.0.0",$/;"	f
+spec	node_modules/graceful-readlink/package.json	/^    "spec": ">=1.0.0",$/;"	f
+tarball	node_modules/commander/package.json	/^    "tarball": "https:\/\/registry.npmjs.org\/commander\/-\/commander-2.10.0.tgz"$/;"	f
+tarball	node_modules/graceful-readlink/package.json	/^    "tarball": "https:\/\/registry.npmjs.org\/graceful-readlink\/-\/graceful-readlink-1.0.1.tgz"$/;"	f
+test	node_modules/commander/package.json	/^    "test": "make test"$/;"	f
+test	node_modules/graceful-readlink/package.json	/^    "test": "echo \\"Error: no test specified\\" && exit 1"$/;"	f
+tmp	node_modules/commander/package.json	/^    "tmp": "tmp\/commander-2.10.0.tgz_1498210375405_0.9538901860360056"$/;"	f
+tokenSplit	converter.coffee	/^  tokenSplit: () =>$/;"	m
+type	node_modules/commander/package.json	/^        "type": "tag"$/;"	f
+type	node_modules/commander/package.json	/^    "type": "git",$/;"	f
+type	node_modules/commander/package.json	/^    "type": "tag"$/;"	f
+type	node_modules/graceful-readlink/package.json	/^        "type": "range"$/;"	f
+type	node_modules/graceful-readlink/package.json	/^    "type": "git",$/;"	f
+type	node_modules/graceful-readlink/package.json	/^    "type": "range"$/;"	f
+url	node_modules/commander/package.json	/^    "url": "git+https:\/\/github.com\/tj\/commander.js.git"$/;"	f
+url	node_modules/commander/package.json	/^    "url": "https:\/\/github.com\/tj\/commander.js\/issues"$/;"	f
+url	node_modules/graceful-readlink/package.json	/^    "url": "git:\/\/github.com\/zhiyelee\/graceful-readlink.git"$/;"	f
+url	node_modules/graceful-readlink/package.json	/^    "url": "https:\/\/github.com\/zhiyelee\/graceful-readlink\/issues"$/;"	f
+version	node_modules/commander/package.json	/^  "version": "2.10.0"$/;"	f
+version	node_modules/graceful-readlink/package.json	/^  "version": "1.0.1"$/;"	f
+{#1}	digits-notes.json	/^  "{#1}": "Db6",$/;"	f
+{#2}	digits-notes.json	/^  "{#2}": "Eb6",$/;"	f
+{#4}	digits-notes.json	/^  "{#4}": "Gb6",$/;"	f
+{#5}	digits-notes.json	/^  "{#5}": "Ab6",$/;"	f
+{#6}	digits-notes.json	/^  "{#6}": "Bb6",$/;"	f
+{1}	digits-notes.json	/^  "{1}": "C6",$/;"	f
+{2}	digits-notes.json	/^  "{2}": "D6",$/;"	f
+{3}	digits-notes.json	/^  "{3}": "E6",$/;"	f
+{4}	digits-notes.json	/^  "{4}": "F6",$/;"	f
+{5}	digits-notes.json	/^  "{5}": "G6",$/;"	f
+{6}	digits-notes.json	/^  "{6}": "A6",$/;"	f
+{7}	digits-notes.json	/^  "{7}": "B6"$/;"	f
