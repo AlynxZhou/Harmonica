@@ -20,6 +20,8 @@ commander
         .option("-t, --to [value]", "To which key.")
         .parse(process.argv)
 
+valueSeq = ['C', '#C', 'D', '#D', 'E', 'F', '#F', 'G', '#G', 'A', '#A', 'B']
+
 if commander.move? and commander.move not in [-12..+12]
   throw new Error("Error: Please use numbers between -12 and +12.")
 else if commander.from? or commander.to?
@@ -72,8 +74,7 @@ class Converter
     @finalJSON = []
 
   tokenSplit: () =>
-    i = 0
-    while i < @line.length
+    for i in [0...@line.length]
       switch @commentStatus
         when SINGLE_COMMENT
           @chordArray[@chordArray.length - 1] += @line.charAt(i)
@@ -82,7 +83,6 @@ class Converter
             if not @chordStatus
               @noteArray.push(@chordArray)
               @chordArray = []
-          i++
           continue
         when MULTI_COMMENT
           @chordArray[@chordArray.length - 1] += @line.charAt(i)
@@ -92,7 +92,6 @@ class Converter
             if not @chordStatus
               @noteArray.push(@chordArray)
               @chordArray = []
-          i++
           continue
       if @line.charAt(i) in @digits
         @chordArray.push(@bracketStatus + @line.charAt(i) + \
@@ -124,33 +123,31 @@ class Converter
          @commentStatus is NOT_COMMENT
         @noteArray.push(@chordArray)
         @chordArray = []
-      i++
 
   fixKey: () =>
-    i = 0
-    while i < @noteArray.length
-      switch @noteArray[i]
-        when '(#3)' then @noteArray[i] = '(4)'
-        when '(#7)' then @noteArray[i] = '1'
-        when '#3' then @noteArray[i] = '4'
-        when '#7' then @noteArray[i] = '[1]'
-        when '[#3]' then @noteArray[i] = '[4]'
-        when '[#7]' then @noteArray[i] = '{1}'
-        when '{#3}' then @noteArray[i] = '{4}'
-      i++
+    for i in [0...@noteArray.length]
+      for j in [0...@noteArray[i].length]
+        switch @noteArray[i][j]
+          when '(#3)' then @noteArray[i][j] = '(4)'
+          when '(#7)' then @noteArray[i][j] = '1'
+          when '#3' then @noteArray[i][j] = '4'
+          when '#7' then @noteArray[i][j] = '[1]'
+          when '[#3]' then @noteArray[i][j] = '[4]'
+          when '[#7]' then @noteArray[i][j] = '{1}'
+          when '{#3}' then @noteArray[i][j] = '{4}'
 
   moveKey: (moveStep) =>
     i = 0
-    while i < @noteArray.length
-      if @keySeq.indexOf(@noteArray[i]) isnt -1
-        if @keySeq.indexOf(@noteArray[i]) + moveStep \
-           in [0...@keySeq.length]
-          @noteArray[i] = @keySeq[@keySeq.indexOf(@noteArray[i]) + \
-                                       moveStep]
-        else
-          throw new Error("Error: Cannot move #{@noteArray[i]} \
-                           with #{moveStep} steps.")
-      i++
+    j = 0
+    for i in [0...@noteArray.length]
+      for j in [0...@noteArray[i].length]
+        if @noteArray[i][j] in @keySeq
+          if @keySeq[@keySeq.indexOf(@noteArray[i][j]) + moveStep]?
+            @noteArray[i][j] = @keySeq[@keySeq.indexOf(@noteArray[i][j]) + \
+            moveStep]
+          else
+            throw new Error("Error: Cannot move #{@noteArray[i][j]} \
+                             with #{moveStep} steps.")
 
   checkBlank: (chordArray) =>
     count = 0
