@@ -12,13 +12,13 @@ readline = require("readline")
 commander = require("commander")
 
 commander
-        .version("0.1.0")
-        .description("A mover of number music scores.")
-        .usage("[options] <file1 file2 ... files>")
-        .option("-m, --move <int>", "Move the key.", parseInt)
-        .option("-f, --from [value]", "From which key.")
-        .option("-t, --to [value]", "To which key.")
-        .parse(process.argv)
+  .version("0.1.0")
+  .description("A mover of number music scores.")
+  .usage("[options] <file1 file2 ... files>")
+  .option("-m, --move <int>", "Move the key.", parseInt)
+  .option("-f, --from [value]", "From which key.")
+  .option("-t, --to [value]", "To which key.")
+  .parse(process.argv)
 
 valueSeq = ['C', '#C', 'D', '#D', 'E', 'F', '#F', 'G', '#G', 'A', '#A', 'B']
 
@@ -74,7 +74,8 @@ class Converter
     @finalJSON = []
 
   tokenSplit: () =>
-    for i in [0...@line.length]
+    i = 0
+    while i < @line.length
       switch @commentStatus
         when SINGLE_COMMENT
           @chordArray[@chordArray.length - 1] += @line.charAt(i)
@@ -83,6 +84,7 @@ class Converter
             if not @chordStatus
               @noteArray.push(@chordArray)
               @chordArray = []
+          ++i
           continue
         when MULTI_COMMENT
           @chordArray[@chordArray.length - 1] += @line.charAt(i)
@@ -92,6 +94,7 @@ class Converter
             if not @chordStatus
               @noteArray.push(@chordArray)
               @chordArray = []
+          ++i
           continue
       if @line.charAt(i) in @digits
         @chordArray.push(@bracketStatus + @line.charAt(i) + \
@@ -123,6 +126,7 @@ class Converter
          @commentStatus is NOT_COMMENT
         @noteArray.push(@chordArray)
         @chordArray = []
+      ++i
 
   fixKey: () =>
     for i in [0...@noteArray.length]
@@ -218,6 +222,7 @@ class Converter
       @line += '\n'
       try
         @tokenSplit()
+        # console.log(@noteArray)
         @fixKey()
         if commander.move? and commander.move isnt 0
           @moveKey(commander.move)
